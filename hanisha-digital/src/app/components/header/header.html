@@ -1,0 +1,40 @@
+<header class="header" [class.scrolled]="scrolled()">
+  <div class="container header-inner">
+    <a href="#" class="logo" aria-label="TECH Studio">
+      <svg class="its-icon-instance" aria-hidden="true" focusable="false">
+        <use xlink:href="#ts-logo-symbol"></use>
+      </svg>
+      <span class="logo-wordmark">TECH <span class="logo-accent">Studio</span></span>
+    </a>
+    <nav class="nav" [class.open]="menuOpen()">
+      <a href="#about" (click)="closeMenu()">{{ 'header.nav.about' | t }}</a>
+      <a href="#services" (click)="closeMenu()">{{ 'header.nav.services' | t }}</a>
+      <a href="#work" (click)="closeMenu()">{{ 'header.nav.work' | t }}</a>
+      <a href="#how-we-work" (click)="closeMenu()">{{ 'header.nav.process' | t }}</a>
+      <a href="#why-us" (click)="closeMenu()">{{ 'header.nav.whyUs' | t }}</a>
+      <a href="#contact" (click)="closeMenu()">{{ 'header.nav.contact' | t }}</a>
+    </nav>
+
+    <div class="header-actions">
+      <label class="language-select">
+        <span>{{ 'header.language.label' | t }}</span>
+        <select [value]="currentLanguage()" (change)="changeLanguage($any($event.target).value)">
+          <option *ngFor="let code of languages" [value]="code">
+            {{ languageLabel(code) }}
+          </option>
+        </select>
+      </label>
+      <a href="#contact" class="btn-cta">{{ 'header.cta.getInTouch' | t }}</a>
+    </div>
+
+    <button
+      class="menu-toggle"
+      (click)="toggleMenu()"
+      [attr.aria-label]="menuOpen() ? ('header.menu.close' | t) : ('header.menu.open' | t)"
+    >
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+  </div>
+</header>

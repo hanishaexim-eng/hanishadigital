@@ -1,0 +1,141 @@
+<section class="how-we-work" id="how-we-work" #root>
+  <div class="container">
+    <span class="section-tag">{{ 'process.sectionTag' | t }}</span>
+    <h2 class="section-title">{{ 'process.title' | t }}</h2>
+    <p class="section-subtitle">{{ 'process.subtitle' | t }}</p>
+
+    <div class="process-layout">
+      <ol class="process-rail">
+        <li class="process-step neon" [class.step-visible]="isStepVisible(0)">
+          <div class="step-header">
+            <span class="step-num">01</span>
+            <h3>{{ 'process.step1.title' | t }}</h3>
+          </div>
+          <p class="step-body">{{ 'process.step1.body' | t }}</p>
+        </li>
+
+        <li class="process-step purple" [class.step-visible]="isStepVisible(1)">
+          <div class="step-header">
+            <span class="step-num">02</span>
+            <h3>{{ 'process.step2.title' | t }}</h3>
+          </div>
+          <p class="step-body">{{ 'process.step2.body' | t }}</p>
+        </li>
+
+        <li class="process-step coral" [class.step-visible]="isStepVisible(2)">
+          <div class="step-header">
+            <span class="step-num">03</span>
+            <h3>{{ 'process.step3.title' | t }}</h3>
+          </div>
+          <p class="step-body">{{ 'process.step3.body' | t }}</p>
+        </li>
+
+        <li class="process-step neon" [class.step-visible]="isStepVisible(3)">
+          <div class="step-header">
+            <span class="step-num">04</span>
+            <h3>{{ 'process.step4.title' | t }}</h3>
+          </div>
+          <p class="step-body">{{ 'process.step4.body' | t }}</p>
+        </li>
+
+        <li class="process-step purple" [class.step-visible]="isStepVisible(4)">
+          <div class="step-header">
+            <span class="step-num">05</span>
+            <h3>{{ 'process.step5.title' | t }}</h3>
+          </div>
+          <p class="step-body">{{ 'process.step5.body' | t }}</p>
+        </li>
+
+        <li class="process-step coral" [class.step-visible]="isStepVisible(5)">
+          <div class="step-header">
+            <span class="step-num">06</span>
+            <h3>{{ 'process.step6.title' | t }}</h3>
+          </div>
+          <p class="step-body">{{ 'process.step6.body' | t }}</p>
+        </li>
+
+        <li class="process-step neon" [class.step-visible]="isStepVisible(6)">
+          <div class="step-header">
+            <span class="step-num">07</span>
+            <h3>{{ 'process.step7.title' | t }}</h3>
+          </div>
+          <p class="step-body">{{ 'process.step7.body' | t }}</p>
+        </li>
+
+        <li class="process-step purple" [class.step-visible]="isStepVisible(7)">
+          <div class="step-header">
+            <span class="step-num">08</span>
+            <h3>{{ 'process.step8.title' | t }}</h3>
+          </div>
+          <p class="step-body">{{ 'process.step8.body' | t }}</p>
+        </li>
+
+        <li class="process-step coral" [class.step-visible]="isStepVisible(8)">
+          <div class="step-header">
+            <span class="step-num">09</span>
+            <h3>{{ 'process.step9.title' | t }}</h3>
+          </div>
+          <p class="step-body">{{ 'process.step9.body' | t }}</p>
+        </li>
+
+        <li class="process-step neon" [class.step-visible]="isStepVisible(9)">
+          <div class="step-header">
+            <span class="step-num">10</span>
+            <h3>{{ 'process.step10.title' | t }}</h3>
+          </div>
+          <p class="step-body">{{ 'process.step10.body' | t }}</p>
+        </li>
+
+        <li class="process-step purple" [class.step-visible]="isStepVisible(10)">
+          <div class="step-header">
+            <span class="step-num">11</span>
+            <h3>{{ 'process.step11.title' | t }}</h3>
+          </div>
+          <p class="step-body">{{ 'process.step11.body' | t }}</p>
+        </li>
+
+        <li class="process-step coral" [class.step-visible]="isStepVisible(11)">
+          <div class="step-header">
+            <span class="step-num">12</span>
+            <h3>{{ 'process.step12.title' | t }}</h3>
+          </div>
+          <p class="step-body">{{ 'process.step12.body' | t }}</p>
+        </li>
+
+        <li class="process-step neon" [class.step-visible]="isStepVisible(12)">
+          <div class="step-header">
+            <span class="step-num">13</span>
+            <h3>{{ 'process.step13.title' | t }}</h3>
+          </div>
+          <p class="step-body">{{ 'process.step13.body' | t }}</p>
+        </li>
+
+        <li class="process-step purple" [class.step-visible]="isStepVisible(13)">
+          <div class="step-header">
+            <span class="step-num">14</span>
+            <h3>{{ 'process.step14.title' | t }}</h3>
+          </div>
+          <p class="step-body">{{ 'process.step14.body' | t }}</p>
+        </li>
+
+        <li class="process-step coral" [class.step-visible]="isStepVisible(14)">
+          <div class="step-header">
+            <span class="step-num">15</span>
+            <h3>{{ 'process.step15.title' | t }}</h3>
+          </div>
+          <p class="step-body">{{ 'process.step15.body' | t }}</p>
+        </li>
+      </ol>
+
+      <aside class="process-summary">
+        <h3>{{ 'process.sidebar.title' | t }}</h3>
+        <p>{{ 'process.sidebar.body' | t }}</p>
+        <ul>
+          <li>{{ 'process.sidebar.point1' | t }}</li>
+          <li>{{ 'process.sidebar.point2' | t }}</li>
+          <li>{{ 'process.sidebar.point3' | t }}</li>
+        </ul>
+      </aside>
+    </div>
+  </div>
+</section>

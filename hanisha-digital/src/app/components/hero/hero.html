@@ -1,0 +1,41 @@
+<section class="hero">
+  <div class="hero-bg">
+    <video #heroVideo class="hero-video" autoplay muted loop playsinline aria-hidden="true" (loadeddata)="onVideoLoaded()" (canplay)="onVideoCanPlay()">
+      <source src="Video_Creation_for_IT_Company.mp4" type="video/mp4">
+    </video>
+    <div class="hero-video-overlay"></div>
+    <div class="hero-dots"></div>
+    <div class="mesh-blob blob-1"></div>
+    <div class="mesh-blob blob-2"></div>
+    <div class="mesh-blob blob-3"></div>
+    <div class="float-orb orb-1"></div>
+    <div class="float-orb orb-2"></div>
+    <div class="float-orb orb-3"></div>
+    <div class="noise-overlay"></div>
+  </div>
+
+  <!-- Geo / language popup: show first on different geo, then run letter animation after dismiss -->
+  @if (showGeoPopup()) {
+    <div class="hero-geo-overlay" role="dialog" aria-label="Language preference">
+      <div class="hero-geo-popup">
+        <p class="hero-geo-message">{{ 'hero.geoPopup.message' | t }}</p>
+        <div class="hero-geo-actions">
+          <button type="button" class="btn-primary" (click)="dismissGeoPopup(true)">
+            {{ 'hero.geoPopup.useSuggested' | t }} ({{ getSuggestedLanguageLabel() }})
+          </button>
+          <button type="button" class="btn-outline" (click)="dismissGeoPopup(false)">
+            {{ 'hero.geoPopup.continueEnglish' | t }}
+          </button>
+        </div>
+      </div>
+    </div>
+  }
+
+  <div class="container hero-inner">
+    <div class="hero-actions">
+      <a href="#services" class="btn-primary">{{ 'hero.primaryCta' | t }} <span class="arrow">→</span></a>
+      <a href="#contact" class="btn-outline">{{ 'hero.secondaryCta' | t }}</a>
+    </div>
+  </div>
+
+</section>
