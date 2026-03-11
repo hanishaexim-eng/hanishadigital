@@ -459,10 +459,15 @@
     min-height: 100dvh;
     height: 100dvh;
   }
+  /* Keep fixed for parallax on mobile; use GPU layer to avoid iOS fixed-position bugs */
   .hero-bg {
-    position: absolute;
+    position: fixed;
     inset: 0;
     min-height: 100%;
+    min-height: 100dvh;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    transform: translateZ(0);
   }
   .hero-video {
     position: absolute;
