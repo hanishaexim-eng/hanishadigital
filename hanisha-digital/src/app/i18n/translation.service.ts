@@ -235,7 +235,7 @@ const TRANSLATIONS: Record<LanguageCode, TranslationDictionary> = {
       'From web platforms to mobile apps and ongoing maintenance — we deliver solutions that help businesses grow. Here’s the kind of work we do for clients worldwide.',
     'portfolio.web.title': 'Web Applications',
     'portfolio.web.text':
-      'Custom web apps: e-commerce, dashboards, portals, and SaaS products — responsive, secure, and built to scale for global users.',
+      'Custom web apps: e-commerce, dashboards, and portals — responsive, secure, and built to scale for global users.',
     'portfolio.mobile.title': 'Mobile Apps',
     'portfolio.mobile.text':
       'iOS and Android apps for consumers and enterprises: from customer-facing products to internal tools and field applications.',

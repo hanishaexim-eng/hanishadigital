@@ -3,160 +3,135 @@
   background: var(--color-bg);
 }
 
-.process-layout {
-  display: grid;
-  grid-template-columns: minmax(0, 3fr) minmax(0, 1.5fr);
-  gap: 32px;
-  margin-top: 32px;
-}
+.process-readmore {
+  margin-top: 14px;
+  padding: 8px 16px;
+  border-radius: 4px;
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  background: rgba(255, 255, 255, 0.06);
+  color: var(--color-text);
+  cursor: pointer;
+  transition: transform var(--transition), background var(--transition), border-color var(--transition);
 
-.process-rail {
-  position: relative;
-  list-style: none;
-  margin: 0;
-  padding: 0 0 0 24px;
-  border-left: 1px solid rgba(255, 255, 255, 0.08);
-}
-
-.process-step {
-  position: relative;
-  margin-bottom: 20px;
-  padding: 18px 20px 18px 18px;
-  border-radius: 0;
-  background: white;
-  border: 1px solid var(--color-border);
-  backdrop-filter: blur(6px);
-  opacity: 0;
-  transform: translateY(16px);
-  transition: opacity 0.4s ease, transform 0.4s ease, box-shadow var(--transition), border-color var(--transition);
-
-  &.step-visible {
-    opacity: 1;
-    transform: translateY(0);
-  }
-
-  &::before {
-    content: '';
-    position: absolute;
-    left: -25px;
-    top: 22px;
-    width: 10px;
-    height: 10px;
-    border-radius: 999px;
-    background: var(--color-bg);
-    box-shadow: 0 0 0 2px var(--color-border-glow);
-  }
-
-  &.neon:hover,
-  &.purple:hover,
-  &.coral:hover {
-    border-color: var(--color-border);
-    box-shadow: var(--shadow-card);
-    transform: scale(1.02);
+  &:hover {
+    transform: scale(1.03);
+    background: rgba(255, 255, 255, 0.1);
+    border-color: rgba(255, 255, 255, 0.32);
   }
 }
 
-.step-header {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  margin-bottom: 6px;
-}
-
-.step-num {
-  font-family: var(--font-heading);
-  font-size: 0.9rem;
-  font-weight: 600;
-  letter-spacing: 0.16em;
-  text-transform: uppercase;
-  color: var(--color-text-subtle);
-}
-
-.process-step h3 {
-  font-size: 1rem;
-  color: black;
-}
-
-.step-body {
-  margin: 4px 0 0;
-  font-size: 0.9rem;
-  line-height: 1.6;
-  color: var(--color-text-muted); 
-}
-
-.process-summary {
-  align-self: flex-start;
+.process-summary-main {
+  margin-top: 22px;
   padding: 24px 22px;
   border-radius: 0;
-  background: white;
+  background: #ffffff;
   border: 1px solid var(--color-border);
-  backdrop-filter: blur(10px);
+  color: #000000;
+  max-width: 640px;
 
   h3 {
     font-size: 1.15rem;
-    margin-bottom: 10px;
-    color: black;
+    margin: 0 0 10px;
+    color: #000000;
   }
 
   p {
     font-size: 0.9rem;
-    color: black;
+    color: #000000;
     line-height: 1.7;
-    margin-bottom: 14px;
+    margin: 0 0 14px;
   }
 
   ul {
     margin: 0;
     padding-left: 18px;
     font-size: 0.9rem;
-    color: black;
+    color: #000000;
 
     li + li { margin-top: 6px; }
   }
-}
 
-@media (max-width: 960px) {
-  .process-layout {
-    grid-template-columns: 1fr;
-  }
+  .process-readmore {
+    border: 1px solid rgba(0, 0, 0, 0.18);
+    background: rgba(0, 0, 0, 0.04);
+    color: #000000;
 
-  .process-summary {
-    order: -1;
-  }
-}
-
-/* Mobile: make steps swipe horizontally to reduce height */
-@media (max-width: 768px) {
-  .process-layout {
-    gap: 24px;
-  }
-
-  .process-rail {
-    display: flex;
-    flex-direction: row;
-    gap: 16px;
-    padding: 0 0 8px 0;
-    margin: 0;
-    border-left: none;
-    overflow-x: auto;
-    scroll-snap-type: x mandatory;
-    -webkit-overflow-scrolling: touch;
-  }
-
-  .process-rail::-webkit-scrollbar {
-    display: none;
-  }
-
-  .process-step {
-    margin-bottom: 0;
-    min-width: 82%;
-    max-width: 82%;
-    flex-shrink: 0;
-    scroll-snap-align: center;
-  }
-
-  .process-step::before {
-    display: none;
+    &:hover {
+      background: rgba(0, 0, 0, 0.08);
+      border-color: rgba(0, 0, 0, 0.26);
+    }
   }
 }
+
+.process-modal-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.65);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.process-modal {
+  background: #ffffff;
+  color: #000000;
+  border-radius: 8px;
+  max-width: min(960px, 100% - 40px);
+  max-height: min(82vh, 760px);
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+.process-modal-close-icon {
+  position: absolute;
+  top: 10px;
+  right: 14px;
+  border: none;
+  background: transparent;
+  font-size: 1.6rem;
+  line-height: 1;
+  cursor: pointer;
+  color: #000000;
+}
+
+.process-modal-content {
+  padding: 22px 22px 18px;
+  overflow-y: auto;
+  max-height: min(82vh, 760px);
+}
+
+.process-modal-content h3 {
+  margin: 0 0 8px;
+  font-size: 1.3rem;
+}
+
+.process-modal-content p {
+  margin: 0 0 14px;
+  color: #222;
+  line-height: 1.6;
+}
+
+.process-modal-steps {
+  margin: 0;
+  padding-left: 18px;
+  line-height: 1.65;
+  color: #111;
+
+  li + li { margin-top: 10px; }
+}
+
+.process-modal-close-btn {
+  margin-top: 16px;
+  padding: 8px 16px;
+  border-radius: 4px;
+  border: 1px solid #000000;
+  background: transparent;
+  font-size: 0.9rem;
+  cursor: pointer;
+  color: #000000;
+}
+
+/* Process rail layout removed from main view; full steps live in modal. */
 

@@ -1,76 +1,95 @@
 <section class="services" id="services">
   <div class="container">
-    <span class="section-tag">{{ 'services.sectionTag' | t }}</span>
-    <h2 class="section-title">{{ 'services.title' | t }}</h2>
-    <p class="section-subtitle">{{ 'services.subtitle' | t }}</p>
+    <span class="section-tag">Industries</span>
+    <h2 class="section-title">Built for teams that need to move fast</h2>
+    <p class="section-subtitle">
+      We help customers modernize, automate, and scale across the industries below.
+    </p>
 
-    <div class="services-stack">
+    <div class="services-stack" #servicesSlider>
       <article class="svc-card svc-neon">
-        <div class="svc-number">01</div>
         <div class="svc-body">
-          <div class="svc-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <rect x="2" y="3" width="20" height="14" rx="2"/>
-              <path d="M8 21h8M12 17v4"/>
-            </svg>
-          </div>
-          <h3>{{ 'services.web.title' | t }}</h3>
-          <p class="svc-lead">{{ 'services.web.lead' | t }}</p>
-          <ul class="svc-points">
-            <li>{{ 'services.web.point1' | t }}</li>
-            <li>{{ 'services.web.point2' | t }}</li>
-            <li>{{ 'services.web.point3' | t }}</li>
-            <li>{{ 'services.web.point4' | t }}</li>
-          </ul>
-          <a href="#contact" class="svc-link">{{ 'services.web.cta' | t }}</a>
-        </div>
-      </article>
-
-      <article class="svc-card svc-purple">
-        <div class="svc-number">02</div>
-        <div class="svc-body">
-          <div class="svc-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <rect x="5" y="2" width="14" height="20" rx="2"/>
-              <path d="M12 18h.01"/>
-            </svg>
-          </div>
-          <h3>{{ 'services.mobile.title' | t }}</h3>
-          <p class="svc-lead">{{ 'services.mobile.lead' | t }}</p>
-          <ul class="svc-points">
-            <li>{{ 'services.mobile.point1' | t }}</li>
-            <li>{{ 'services.mobile.point2' | t }}</li>
-            <li>{{ 'services.mobile.point3' | t }}</li>
-            <li>{{ 'services.mobile.point4' | t }}</li>
-          </ul>
-          <a href="#contact" class="svc-link">{{ 'services.mobile.cta' | t }}</a>
+          <div class="svc-media svc-media-healthcare" aria-hidden="true"></div>
+          <h3>Healthcare &amp; Wellness</h3>
+          <p class="svc-lead">
+            Patient-first platforms, secure data flows, and automation that reduces operational load.
+          </p>
         </div>
       </article>
 
       <article class="svc-card svc-coral">
-        <div class="svc-number">03</div>
         <div class="svc-body">
-          <div class="svc-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
-            </svg>
-          </div>
-          <h3>{{ 'services.maintenance.title' | t }}</h3>
-          <p class="svc-lead">{{ 'services.maintenance.lead' | t }}</p>
-          <ul class="svc-points">
-            <li>{{ 'services.maintenance.point1' | t }}</li>
-            <li>{{ 'services.maintenance.point2' | t }}</li>
-            <li>{{ 'services.maintenance.point3' | t }}</li>
-            <li>{{ 'services.maintenance.point4' | t }}</li>
-          </ul>
-          <a href="#contact" class="svc-link">{{ 'services.maintenance.cta' | t }}</a>
+          <div class="svc-media svc-media-retail" aria-hidden="true"></div>
+          <h3>Retail &amp; E‑commerce</h3>
+          <p class="svc-lead">
+            Conversion-focused experiences and automated operations from inventory to fulfillment.
+          </p>
+        </div>
+      </article>
+
+      <article class="svc-card svc-neon">
+        <div class="svc-body">
+          <div class="svc-media svc-media-manufacturing" aria-hidden="true"></div>
+          <h3>Manufacturing</h3>
+          <p class="svc-lead">
+            Production visibility, predictive maintenance, and systems that connect shop-floor to HQ.
+          </p>
+        </div>
+      </article>
+
+      <article class="svc-card svc-purple">
+        <div class="svc-body">
+          <div class="svc-media svc-media-logistics" aria-hidden="true"></div>
+          <h3>Logistics &amp; Supply Chain</h3>
+          <p class="svc-lead">
+            Tracking, orchestration, and automation for complex multi-partner operations.
+          </p>
+        </div>
+      </article>
+
+      <article class="svc-card svc-coral">
+        <div class="svc-body">
+          <div class="svc-media svc-media-education" aria-hidden="true"></div>
+          <h3>Education &amp; Training</h3>
+          <p class="svc-lead">
+            Learning platforms that engage users and scale across cohorts, regions, and devices.
+          </p>
+        </div>
+      </article>
+
+      <article class="svc-card svc-neon">
+        <div class="svc-body">
+          <div class="svc-media svc-media-realestate" aria-hidden="true"></div>
+          <h3>Real Estate</h3>
+          <p class="svc-lead">
+            Lead pipelines, property workflows, and customer experiences that convert and retain.
+          </p>
+        </div>
+      </article>
+
+      <article class="svc-card svc-purple">
+        <div class="svc-body">
+          <div class="svc-media svc-media-hospitality" aria-hidden="true"></div>
+          <h3>Hospitality &amp; Travel</h3>
+          <p class="svc-lead">
+            Booking, customer support, and operations tools built for high season traffic.
+          </p>
         </div>
       </article>
     </div>
 
+    <div class="services-slider-nav" aria-label="Industries slider controls">
+      <button type="button" class="services-slider-btn" (click)="scrollPrev()" aria-label="Previous">
+        ←
+      </button>
+      <button type="button" class="services-slider-btn" (click)="scrollNext()" aria-label="Next">
+        →
+      </button>
+    </div>
+
     <div class="services-bottom">
-      <p>{{ 'services.cta.text' | t }}</p>
-      <a href="#contact" class="btn-primary">{{ 'services.cta.button' | t }}</a>
+      <p>Not sure which category you fit? Tell us what you’re building — we’ll propose the best approach.</p>
+      <a href="#contact" class="btn-primary">Get a tailored plan</a>
     </div>
   </div>
 </section>
