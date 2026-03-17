@@ -22,7 +22,7 @@
   display: block;
   padding: 0;
   border-radius: 0;
-  background: white;
+  background: var(--color-surface);
   border: 1px solid var(--color-border);
   backdrop-filter: blur(6px);
   overflow: hidden;
@@ -39,7 +39,7 @@
 }
 
 .svc-body {
-  padding: 0px;
+  padding: 22px 22px 24px;
 }
 
 .svc-media {
@@ -47,7 +47,7 @@
   height: 240px;
   margin: 0;
   border: none;
-  background: #f1f1f1;
+  background: var(--color-bg-elevated);
   background-size: cover;
   background-position: center;
 }
@@ -63,16 +63,16 @@
   width: 44px;
   height: 44px;
   border-radius: 999px;
-  border: 1px solid rgba(255, 255, 255, 0.18);
-  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid var(--color-border);
+  background: var(--color-surface);
   color: var(--color-text);
   cursor: pointer;
   transition: transform var(--transition), background var(--transition), border-color var(--transition);
 
   &:hover {
     transform: scale(1.05);
-    background: rgba(255, 255, 255, 0.1);
-    border-color: rgba(255, 255, 255, 0.28);
+    background: var(--color-bg-elevated);
+    border-color: var(--color-border-glow);
   }
 }
 
@@ -103,13 +103,13 @@
 }
 
 .svc-neon {
-  border-left: 3px solid rgba(255, 255, 255, 0.12);
+  border-left: 3px solid rgba(15, 23, 42, 0.08);
 }
 .svc-purple {
-  border-left: 3px solid rgba(255, 255, 255, 0.12);
+  border-left: 3px solid rgba(15, 23, 42, 0.08);
 }
 .svc-coral {
-  border-left: 3px solid rgba(255, 255, 255, 0.12);
+  border-left: 3px solid rgba(15, 23, 42, 0.08);
 }
 
 .svc-icon {
@@ -131,11 +131,11 @@
 .svc-body h3 {
   font-size: 1.25rem;
   margin-bottom: 10px;
-  color: black;
+  color: var(--color-text);
 }
 
 .svc-lead {
-  color: black;
+  color: var(--color-text-muted);
   font-size: 0.92rem;
   line-height: 1.7;
   margin-bottom: 16px;

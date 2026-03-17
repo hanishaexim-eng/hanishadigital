@@ -1,14 +1,14 @@
 .why-us {
   padding: var(--section-padding-y) 0;
-  background: #f8f9fa;
+  background: var(--color-bg-elevated);
 }
 
 .why-us .section-tag {
-  color: #0a7a8a;
-  &::before { background: #0a7a8a; }
+  color: var(--color-text-muted);
+  &::before { background: var(--color-border); }
 }
-.why-us .section-title { color: #1a1a1a; }
-.why-us .section-subtitle { color: #555; }
+.why-us .section-title { color: var(--color-text); }
+.why-us .section-subtitle { color: var(--color-text-muted); }
 
 .reasons-row {
   display: grid;
@@ -19,8 +19,8 @@
 .reason {
   padding: 28px 24px;
   border-radius: 0;
-  background: #0d0d14;
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
   backdrop-filter: blur(6px);
   transition: transform var(--transition), box-shadow var(--transition);
   display: flex;
@@ -38,18 +38,18 @@
   font-weight: 700;
   line-height: 1;
   margin-bottom: 20px;
-  color: #9ba2b4;
+  color: var(--color-text-subtle);
   opacity: 0.6;
 }
 
 .reason h3 {
   font-size: 1.1rem;
   margin-bottom: 10px;
-  color: #eaedf3;
+  color: var(--color-text);
 }
 
 .reason p {
-  color: #9ba2b4;
+  color: var(--color-text-muted);
   font-size: 0.9rem;
   line-height: 1.7;
   margin: 0;

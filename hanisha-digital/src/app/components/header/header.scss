@@ -9,9 +9,10 @@
   border-bottom: 1px solid transparent;
 
   &.scrolled {
-    background: rgba(6, 6, 11, 0.75);
+    background: rgba(255, 255, 255, 0.75);
     backdrop-filter: var(--glass);
     border-bottom-color: var(--color-border);
+    box-shadow: 0 10px 30px rgba(15, 23, 42, 0.08);
   }
 }
 
