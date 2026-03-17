@@ -22,7 +22,7 @@
   position: relative;
   margin-bottom: 20px;
   padding: 18px 20px 18px 18px;
-  border-radius: var(--radius-lg);
+  border-radius: 0;
   background: white;
   border: 1px solid var(--color-border);
   backdrop-filter: blur(6px);
@@ -44,15 +44,16 @@
     height: 10px;
     border-radius: 999px;
     background: var(--color-bg);
-    box-shadow: 0 0 0 2px rgba(0, 212, 255, 0.4);
+    box-shadow: 0 0 0 2px var(--color-border-glow);
   }
 
-  &.purple::before { box-shadow: 0 0 0 2px rgba(123, 97, 255, 0.6); }
-  &.coral::before  { box-shadow: 0 0 0 2px rgba(255, 107, 107, 0.6); }
-
-  &.neon:hover   { border-color: rgba(0, 212, 255, 0.45); box-shadow: 0 0 32px rgba(0, 212, 255, 0.1); }
-  &.purple:hover { border-color: rgba(123, 97, 255, 0.45); box-shadow: 0 0 32px rgba(123, 97, 255, 0.1); }
-  &.coral:hover  { border-color: rgba(255, 107, 107, 0.45); box-shadow: 0 0 32px rgba(255, 107, 107, 0.1); }
+  &.neon:hover,
+  &.purple:hover,
+  &.coral:hover {
+    border-color: var(--color-border);
+    box-shadow: var(--shadow-card);
+    transform: scale(1.02);
+  }
 }
 
 .step-header {
@@ -86,7 +87,7 @@
 .process-summary {
   align-self: flex-start;
   padding: 24px 22px;
-  border-radius: var(--radius-lg);
+  border-radius: 0;
   background: white;
   border: 1px solid var(--color-border);
   backdrop-filter: blur(10px);

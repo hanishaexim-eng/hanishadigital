@@ -15,28 +15,26 @@
   grid-template-columns: 64px 1fr;
   gap: 24px;
   padding: 32px 28px;
-  border-radius: var(--radius-lg);
+  border-radius: 0;
   background: white;
   border: 1px solid var(--color-border);
   backdrop-filter: blur(6px);
-  transition: transform var(--transition), border-color var(--transition), box-shadow var(--transition);
+  transition: transform var(--transition), box-shadow var(--transition);
 
   &:hover {
-    transform: translateY(-4px) translateX(4px);
+    transform: scale(1.02);
+    box-shadow: var(--shadow-card);
   }
 }
 
 .svc-neon {
-  border-left: 3px solid rgba(0, 212, 255, 0.5);
-  &:hover { border-color: rgba(0, 212, 255, 0.6); box-shadow: 0 0 40px rgba(0, 212, 255, 0.08); }
+  border-left: 3px solid rgba(255, 255, 255, 0.12);
 }
 .svc-purple {
-  border-left: 3px solid rgba(123, 97, 255, 0.5);
-  &:hover { border-color: rgba(123, 97, 255, 0.6); box-shadow: 0 0 40px rgba(123, 97, 255, 0.08); }
+  border-left: 3px solid rgba(255, 255, 255, 0.12);
 }
 .svc-coral {
-  border-left: 3px solid rgba(255, 107, 107, 0.5);
-  &:hover { border-color: rgba(255, 107, 107, 0.6); box-shadow: 0 0 40px rgba(255, 107, 107, 0.08); }
+  border-left: 3px solid rgba(255, 255, 255, 0.12);
 }
 
 .svc-number {
@@ -44,11 +42,8 @@
   font-size: 2rem;
   font-weight: 700;
   line-height: 1;
-  background: var(--gradient-neon);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-  opacity: 0.5;
+  color: var(--color-text-muted);
+  opacity: 0.6;
 }
 
 .svc-icon {
@@ -57,9 +52,9 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  border-radius: 12px;
+  border-radius: 0;
   margin-bottom: 16px;
-  color: var(--color-neon);
+  color: var(--color-text);
 
   .svc-purple & { color: var(--color-purple); }
   .svc-coral &  { color: var(--color-coral); }
@@ -98,7 +93,7 @@
       content: '›';
       position: absolute;
       left: 0;
-      color: var(--color-neon);
+      color: var(--color-text-subtle);
       font-weight: 700;
     }
   }
@@ -110,7 +105,7 @@
 .svc-link {
   font-weight: 600;
   font-size: 0.9rem;
-  color: var(--color-neon);
+  color: var(--color-accent-light);
   display: inline-flex;
   align-items: center;
   gap: 4px;
@@ -124,7 +119,7 @@
 .services-bottom {
   text-align: center;
   padding: 40px;
-  border-radius: var(--radius-lg);
+  border-radius: 0;
   background: white;
   border: 1px solid var(--color-border);
   backdrop-filter: blur(6px);

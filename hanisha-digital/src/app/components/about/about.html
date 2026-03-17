@@ -1,40 +1,279 @@
 <section class="about" id="about">
   <div class="container">
-    <div class="about-header">
-      <span class="section-tag">{{ 'about.sectionTag' | t }}</span>
-      <h2 class="section-title">{{ 'about.title' | t }}</h2>
-    </div>
+    <header class="about-header">
+      <span class="section-tag">About Us</span>
+      <h2 class="section-title">Building Adaptive Digital Futures</h2>
+      <p class="about-lead">
+        At [Company Name], we believe that world-class software shouldn't be a luxury reserved only
+        for tech giants. Founded by a team of forward-thinking developers, we started this journey
+        with a simple mission: to bridge the gap between ambitious business ideas and
+        high-performance digital solutions.
+      </p>
+    </header>
 
-    <div class="bento">
-      <div class="bento-wide glass-card">
-        <p class="bento-lead">{{ 'about.lead' | t }}</p>
-      </div>
+    <ul class="about-highlights">
+      <li class="about-highlight">
+        <span class="about-highlight-icon" aria-hidden="true">◆</span>
+        <div class="about-highlight-body">
+          <div class="about-highlight-media"></div>
+          <div class="about-highlight-title">Our Philosophy</div>
+          <p class="about-highlight-summary">
+            We don’t just write lines of code; we build the engines that drive business development.
+          </p>
+          <button type="button" class="about-highlight-cta" (click)="toggle(0)">
+            {{ isExpanded(0) ? 'Show less' : 'Read more' }}
+          </button>
+        </div>
+      </li>
+      <li class="about-highlight">
+        <span class="about-highlight-icon" aria-hidden="true">◆</span>
+        <div class="about-highlight-body">
+          <div class="about-highlight-media"></div>
+          <div class="about-highlight-title">Why Partner With Us – A Fresh Perspective</div>
+          <p class="about-highlight-summary">
+            As a team of young innovators, we stay on the pulse of emerging technologies.
+          </p>
+          <button type="button" class="about-highlight-cta" (click)="toggle(1)">
+            {{ isExpanded(1) ? 'Show less' : 'Read more' }}
+          </button>
+        </div>
+      </li>
+      <li class="about-highlight">
+        <span class="about-highlight-icon" aria-hidden="true">◆</span>
+        <div class="about-highlight-body">
+          <div class="about-highlight-media"></div>
+          <div class="about-highlight-title">Scale-Agnostic Support &amp; Idea-to-Product Experts</div>
+          <p class="about-highlight-summary">
+            From automating a single process to architecting robust systems, your growth is our metric for success.
+          </p>
+          <button type="button" class="about-highlight-cta" (click)="toggle(2)">
+            {{ isExpanded(2) ? 'Show less' : 'Read more' }}
+          </button>
+        </div>
+      </li>
+      <li class="about-highlight">
+        <span class="about-highlight-icon" aria-hidden="true">◆</span>
+        <div class="about-highlight-body">
+          <div class="about-highlight-media"></div>
+          <div class="about-highlight-title">The Team</div>
+          <p class="about-highlight-summary">
+            We are a collective of creators, problem-solvers, and digital architects.
+          </p>
+          <button type="button" class="about-highlight-cta" (click)="toggle(3)">
+            {{ isExpanded(3) ? 'Show less' : 'Read more' }}
+          </button>
+        </div>
+      </li>
+    </ul>
 
-      <div class="bento-tall glass-card neon-accent">
-        <div class="card-icon">🌐</div>
-        <h3>{{ 'about.card.globalFirst.title' | t }}</h3>
-        <p>{{ 'about.card.globalFirst.text' | t }}</p>
-        <p class="card-extra">{{ 'about.card.globalFirst.extra' | t }}</p>
-      </div>
+    @if (selectedIndex() !== null) {
+      <div class="about-modal-backdrop" (click)="toggle(selectedIndex() ?? 0)">
+        <div class="about-modal" (click)="$event.stopPropagation()">
+          <button
+            type="button"
+            class="about-modal-close-icon"
+            aria-label="Close"
+            (click)="toggle(selectedIndex() ?? 0)"
+          >
+            ×
+          </button>
 
-      <div class="bento-sm glass-card purple-accent">
-        <div class="card-icon">🤝</div>
-        <h3>{{ 'about.card.trustedPartner.title' | t }}</h3>
-        <p>{{ 'about.card.trustedPartner.text' | t }}</p>
-      </div>
+          <div class="about-modal-media"></div>
 
-      <div class="bento-text glass-card">
-        <p>{{ 'about.text' | t }}</p>
-      </div>
+          <div class="about-modal-content">
+            @if (selectedIndex() === 0) {
+              <h3>Our Philosophy – Precision, Curiosity, Agility</h3>
+              <p class="about-detail-intro">
+                We believe that clean code is a prerequisite, not a finish line. Precision means
+                understanding the \"why\" before the \"how.\"
+              </p>
+              <h4>Our Core Pillars</h4>
+              <ul>
+                <li><strong>Architectural Integrity:</strong> Systems built to last and scale.</li>
+                <li><strong>Security-First Mindset:</strong> Protecting your data and your reputation.</li>
+                <li><strong>Quality Assurance:</strong> Rigorous testing protocols that leave nothing to chance.</li>
+              </ul>
+              <h4>Curiosity: Beyond the Requirements Document</h4>
+              <p>
+                The best solutions rarely come from just following instructions; they come from asking the
+                right questions. We dive deep into your industry’s pain points to uncover opportunities you
+                might not have realized were possible through technology.
+              </p>
+              <ul>
+                <li><strong>Problem Discovery:</strong> We don't just build what you ask for; we build what you actually need.</li>
+                <li><strong>Future-Proofing:</strong> Staying ahead of emerging tech to give you a competitive edge.</li>
+                <li><strong>User-Centric Design:</strong> Aligning technical power with intuitive human experiences.</li>
+              </ul>
+              <h4>Agility: Moving at the Speed of Business</h4>
+              <p>
+                Our agile methodology is about maintaining a tight feedback loop that lets us pivot based on
+                real-world data and shifting market demands.
+              </p>
+              <ul>
+                <li><strong>Rapid Prototyping:</strong> Getting your MVP to market faster to start the learning cycle.</li>
+                <li><strong>Continuous Integration:</strong> Seamless updates that keep your business moving.</li>
+                <li><strong>Transparent Collaboration:</strong> Real-time communication that keeps you in the driver’s seat.</li>
+              </ul>
+            } @else if (selectedIndex() === 1) {
+              <h3>Why Partner With Us – The Modern Advantage</h3>
+              <h4>The Modern Advantage</h4>
+              <p class="about-detail-intro">
+                We didn’t just adapt to the digital world; we were built in it. Technology isn’t an
+                add-on to your business—it’s the nervous system that connects everything.
+              </p>
+              <p>
+                Our team bypasses outdated methodologies to implement cloud-native, mobile-first, and
+                AI-integrated strategies from day one.
+              </p>
+              <h4>Bridging Innovation and Stability</h4>
+              <p>
+                Being fresh doesn’t mean being reckless. We understand that for a large-scale enterprise
+                or a growing startup, uptime is everything.
+              </p>
+              <ul>
+                <li><strong>Modern Tech Stacks:</strong> Latest frameworks that deliver better performance with less code.</li>
+                <li><strong>Scalability by Design:</strong> Architectures built to handle ten users today and ten thousand tomorrow—without a rewrite.</li>
+                <li><strong>Security as a Standard:</strong> Modern security practices integrated into the lifecycle, not bolted on at the end.</li>
+              </ul>
+              <h4>How We Solve “Age-Old” Problems</h4>
+              <ul>
+                <li><strong>From rigid to responsive:</strong> We replace multi-year, rigid roadmaps with rapid iteration and continuous delivery.</li>
+                <li><strong>From silos to visibility:</strong> We move you from siloed, “black box” systems to transparent, integrated ecosystems.</li>
+                <li><strong>From patchwork to architecture:</strong> Instead of endlessly patching symptoms, we design elegant systems that solve root causes.</li>
+              </ul>
+              <h4>Our Culture of Curiosity</h4>
+              <p>
+                We are obsessed with “What’s next.” From Generative AI to Edge Computing, our team spends
+                dedicated time researching emerging trends so we can advise you on what’s worth the
+                investment—and what’s just hype.
+              </p>
+              <p>
+                We don’t just follow industry standards; we aim to help shape them for the businesses we
+                work with.
+              </p>
+              <h4>The “Zero Friction” Partnership</h4>
+              <ul>
+                <li><strong>Radical Transparency:</strong> Direct access to progress, code, and sprint boards.</li>
+                <li><strong>Jargon-Free Communication:</strong> We speak the language of business, not only syntax.</li>
+                <li><strong>Agile Pivoting:</strong> If the market shifts, we shift with you—quickly and safely.</li>
+              </ul>
+              <p>
+                “The biggest risk in today’s economy isn't trying something new; it’s relying on technical
+                foundations that were designed for yesterday’s problems. We provide the tools to help you
+                outpace the competition.”
+              </p>
+            } @else if (selectedIndex() === 2) {
+              <h3>Scale-Agnostic Support &amp; Idea-to-Product Experts</h3>
+              <h4>Bridging the Gap: From Concept to Global Scale</h4>
+              <p class="about-detail-intro">
+                Whether you’re validating your first idea or operating at global scale, we help you move
+                from concept to production with confidence.
+              </p>
+              <h4>For Startups: The “Idea-to-Product” Launchpad</h4>
+              <p>
+                We don’t just build apps; we launch businesses. In the early stages, speed-to-market and
+                real user feedback are your most valuable currencies. Our team acts as your fractional CTO
+                and engineering arm, helping you navigate the Build–Measure–Learn cycle.
+              </p>
+              <ul>
+                <li><strong>Rapid Prototyping &amp; MVPs:</strong> Turning your vision into a functional, testable product in weeks, not months.</li>
+                <li><strong>Lean Engineering:</strong> Focusing on core features that drive value while keeping technical debt at bay.</li>
+                <li><strong>Investor-Ready Architecture:</strong> Building on a foundation that stands up to due diligence and security reviews.</li>
+              </ul>
+              <h4>For Enterprises: Modernizing the Core</h4>
+              <p>
+                Scale brings complexity. We specialize in unboxing “black box” legacy systems and replacing
+                them with modern, automated ecosystems that breathe new life into your operations.
+              </p>
+              <ul>
+                <li><strong>Workflow Automation:</strong> Replacing manual bottlenecks with intelligent, self-sustaining processes.</li>
+                <li><strong>System Orchestration:</strong> Making sure your tools actually talk to each other through custom APIs and integrations.</li>
+                <li><strong>Data-Driven Decisions:</strong> Implementing analytics layers that turn raw data into real business intelligence.</li>
+              </ul>
+              <h4>The Lifecycle of Your Growth</h4>
+              <ul>
+                <li><strong>Discovery:</strong> Mapping the idea, identifying technical hurdles, and creating a clear, actionable roadmap.</li>
+                <li><strong>Development:</strong> Building with a focus on UX, performance, and clean code so users actually love the product.</li>
+                <li><strong>Optimization:</strong> Automating repetitive tasks and scaling infrastructure to reduce overhead.</li>
+                <li><strong>Expansion:</strong> Adding features and supporting global traffic without breaking what’s already working.</li>
+              </ul>
+              <h4>Why “Scale-Agnostic” Matters</h4>
+              <p>
+                Most teams pick a side: “small and fast” or “big and slow.” We’ve broken that mold. By
+                applying enterprise-grade standards to startup projects—and startup-level agility to
+                enterprise problems—we make sure your tech stack is never the thing holding you back.
+              </p>
+              <p>
+                Our success isn’t measured by the number of lines of code we write, but by your user
+                growth, operational efficiency, and the stability of your bottom line.
+              </p>
+              <h4>Expertise That Grows With You</h4>
+              <p>
+                Whether you want to automate a spreadsheet into a cloud dashboard, build a consumer-facing
+                mobile app, or migrate a massive on-premise database to the cloud, we have the hands-on
+                experience to get you there.
+              </p>
+            } @else {
+              <h3>The Team – Your Embedded Tech Partner</h3>
+              <h4>Beyond the Contract: Why “Embedded” Matters</h4>
+              <p class="about-detail-intro">
+                When we say we are embedded, we mean we don’t just take tickets—we take responsibility.
+                We plug into your communication channels, attend your strategy sessions, and challenge
+                assumptions when we see a better path forward.
+              </p>
+              <ul>
+                <li><strong>Proactive Problem Solving:</strong> Identifying technical bottlenecks before they impact your users.</li>
+                <li><strong>Shared Language:</strong> Bridging the gap between “developer speak” and clear business goals.</li>
+                <li><strong>Direct Access:</strong> No layers of account managers—you talk directly to the people building your product.</li>
+              </ul>
+              <h4>Ownership: We Code Like Founders</h4>
+              <p>
+                As a startup ourselves, we know every line of code is an investment. We don’t “deliver and
+                disappear.” We treat your codebase with the same rigor we treat our own, focusing on
+                maintainability, documentation, and long-term health.
+              </p>
+              <ul>
+                <li><strong>No Vendor Lock‑in:</strong> Clean, documented systems that you own entirely.</li>
+                <li><strong>Transparency First:</strong> Real-time visibility into sprints, blockers, and progress.</li>
+                <li><strong>Strategic Alignment:</strong> If a feature doesn’t help you hit your KPIs, we’ll say so—even if it means less billable work.</li>
+              </ul>
+              <h4>The Lifecycle of a Partnership</h4>
+              <ul>
+                <li><strong>Scoping:</strong> Traditional vendors follow the RFP; we question the “why” to find a better “how.”</li>
+                <li><strong>Communication:</strong> Weekly reports vs. constant, agile collaboration in your Slack or Teams.</li>
+                <li><strong>Delivery:</strong> Handing over files vs. launching, monitoring, and iterating together.</li>
+                <li><strong>Post‑Launch:</strong> Charging for every small tweak vs. investigating growth opportunities and optimizations.</li>
+              </ul>
+              <h4>A Bridge Built on Trust</h4>
+              <p>
+                “Your scale doesn't define your potential. Your ideas do. We’re just here to build the bridge.”
+              </p>
+              <p>
+                Building that bridge requires more than technical skill—it requires empathy. We’ve lived
+                through early-stage pivots and high-pressure scaling environments. We know that behind every
+                dashboard is a person trying to change an industry.
+              </p>
+              <p>
+                We aren’t just building your software; we are protecting your vision.
+              </p>
+              <h4>What “Long-Term” Looks Like for Us</h4>
+              <ul>
+                <li><strong>Phase 1:</strong> Deep dive into your business logic and cultural DNA.</li>
+                <li><strong>Phase 2:</strong> Engineering a high-performance foundation.</li>
+                <li><strong>Phase 3:</strong> Continuous evolution as your market and user needs shift.</li>
+              </ul>
+            }
 
-      <div class="bento-list glass-card coral-accent">
-        <ul>
-          <li>{{ 'about.point1' | t }}</li>
-          <li>{{ 'about.point2' | t }}</li>
-          <li>{{ 'about.point3' | t }}</li>
-          <li>{{ 'about.point4' | t }}</li>
-        </ul>
+            <button
+              type="button"
+              class="about-modal-close-btn"
+              (click)="toggle(selectedIndex() ?? 0)"
+            >
+              Close
+            </button>
+          </div>
+        </div>
       </div>
-    </div>
+    }
   </div>
 </section>

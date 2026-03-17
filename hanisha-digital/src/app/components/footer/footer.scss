@@ -29,9 +29,9 @@
   width: 32px;
   height: 32px;
   flex-shrink: 0;
-  fill: var(--color-neon);
-  color: var(--color-neon);
-  filter: drop-shadow(0 0 8px rgba(0, 212, 255, 0.3));
+  fill: var(--color-accent-light);
+  color: var(--color-accent-light);
+  filter: none;
   transition: transform 0.3s ease, fill 0.3s ease, color 0.3s ease;
 }
 
@@ -43,7 +43,7 @@
   letter-spacing: 0.02em;
 
   .logo-accent {
-    color: var(--color-neon);
+    color: var(--color-accent-light);
   }
 }
 
@@ -71,7 +71,7 @@
     border: none;
     border-radius: 0;
     transition: color var(--transition);
-    &:hover { color: var(--color-neon); }
+    &:hover { color: var(--color-accent-light); }
   }
 }
 

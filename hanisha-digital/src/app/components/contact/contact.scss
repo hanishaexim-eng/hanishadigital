@@ -3,7 +3,7 @@
   background: var(--color-bg);
 }
 
-.contact .section-tag { color: var(--color-neon); }
+.contact .section-tag { color: var(--color-text-muted); }
 
 .contact-wrapper {
   display: grid;
@@ -33,18 +33,18 @@
     display: block;
     font-size: 0.75rem;
     font-weight: 600;
-    color: var(--color-neon);
+    color: var(--color-text-subtle);
     text-transform: uppercase;
     letter-spacing: 0.1em;
     margin-bottom: 6px;
   }
   a, p { color: var(--color-text-muted); font-size: 0.95rem; margin: 0; }
-  a:hover { color: var(--color-neon); }
+  a:hover { color: var(--color-accent-light); }
 }
 
 .contact-form-wrap {
   padding: 36px;
-  border-radius: var(--radius-lg);
+  border-radius: 0;
   background: rgba(255, 255, 255, 0.03);
   border: 1px solid var(--color-border);
   backdrop-filter: blur(8px);
@@ -81,8 +81,8 @@
 
     &:focus {
       outline: none;
-      border-color: var(--color-neon);
-      box-shadow: 0 0 0 3px rgba(0, 212, 255, 0.12);
+      border-color: var(--color-border-glow);
+      box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.08);
     }
   }
   textarea { resize: vertical; min-height: 100px; }

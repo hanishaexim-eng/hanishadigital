@@ -20,17 +20,17 @@
 .work-card {
   color: white !important;
   padding: 32px 26px;
-  border-radius: var(--radius-lg);
+  border-radius: 0;
   background: black;
   border: 1px solid black;
   backdrop-filter: blur(6px);
   text-align: center;
-  transition: transform var(--transition), border-color var(--transition), box-shadow var(--transition);
+  transition: transform var(--transition), box-shadow var(--transition);
 
-  &:hover { transform: translateY(-6px); }
-  &.neon-accent:hover   { border-color: rgba(0, 212, 255, 0.4); box-shadow: 0 0 32px rgba(0, 212, 255, 0.08); }
-  &.purple-accent:hover { border-color: rgba(123, 97, 255, 0.4); box-shadow: 0 0 32px rgba(123, 97, 255, 0.08); }
-  &.coral-accent:hover  { border-color: rgba(255, 107, 107, 0.4); box-shadow: 0 0 32px rgba(255, 107, 107, 0.08); }
+  &:hover {
+    transform: scale(1.03);
+    box-shadow: var(--shadow-card);
+  }
 }
 
 .work-emoji {
@@ -55,7 +55,7 @@
 .portfolio-foot {
   text-align: center;
   padding: 36px;
-  border-radius: var(--radius-lg);
+  border-radius: 0;
   background: #0d0d14;
   border: 1px solid rgba(255, 255, 255, 0.1);
 
@@ -66,8 +66,8 @@
   }
 
   .btn-primary {
-    background: var(--gradient-neon);
-    color: #06060b;
+    background: var(--color-purple);
+    color: #ffffff;
   }
 }
 

@@ -18,21 +18,18 @@
 
 .reason {
   padding: 28px 24px;
-  border-radius: var(--radius-lg);
+  border-radius: 0;
   background: #0d0d14;
   border: 1px solid rgba(255, 255, 255, 0.1);
   backdrop-filter: blur(6px);
-  transition: transform var(--transition), border-color var(--transition), box-shadow var(--transition);
+  transition: transform var(--transition), box-shadow var(--transition);
   display: flex;
   flex-direction: column;
 
   &:hover {
-    transform: translateY(-6px);
+    transform: scale(1.02);
+    box-shadow: var(--shadow-card);
   }
-
-  &.neon-accent:hover   { border-color: rgba(0, 212, 255, 0.4); box-shadow: 0 0 32px rgba(0, 212, 255, 0.08); }
-  &.purple-accent:hover { border-color: rgba(123, 97, 255, 0.4); box-shadow: 0 0 32px rgba(123, 97, 255, 0.08); }
-  &.coral-accent:hover  { border-color: rgba(255, 107, 107, 0.4); box-shadow: 0 0 32px rgba(255, 107, 107, 0.08); }
 }
 
 .reason-num {
@@ -41,11 +38,8 @@
   font-weight: 700;
   line-height: 1;
   margin-bottom: 20px;
-  background: var(--gradient-neon);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-  opacity: 0.3;
+  color: #9ba2b4;
+  opacity: 0.6;
 }
 
 .reason h3 {

@@ -15,7 +15,7 @@
   --color-purple-dim: rgba(123, 97, 255, 0.12);
   --color-coral: #FF6B6B;
   --color-coral-dim: rgba(255, 107, 107, 0.12);
-  --color-accent: var(--color-neon);
+  --color-accent: var(--color-purple);
   --color-accent-light: #66E5FF;
   --color-accent-dark: #009EC2;
   --gradient-neon: linear-gradient(135deg, #00D4FF 0%, #7B61FF 50%, #FF6B6B 100%);
@@ -67,7 +67,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 a {
-  color: var(--color-neon);
+  color: var(--color-accent-light);
   text-decoration: none;
   transition: color var(--transition);
   &:hover { color: var(--color-accent-light); }
@@ -96,7 +96,7 @@ a {
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 0.18em;
-  color: var(--color-neon);
+  color: var(--color-text-muted);
   margin-bottom: 20px;
 
   &::before {
@@ -104,7 +104,7 @@ a {
     display: block;
     width: 28px;
     height: 1px;
-    background: var(--color-neon);
+    background: var(--color-border);
   }
 }
 
@@ -128,8 +128,8 @@ a {
   align-items: center;
   gap: 10px;
   padding: 14px 32px;
-  background: var(--color-neon);
-  color: #06060B;
+  background: var(--color-purple);
+  color: #ffffff;
   font-weight: 700;
   font-size: 0.92rem;
   border: none;
@@ -140,9 +140,8 @@ a {
   letter-spacing: -0.01em;
 
   &:hover {
-    color: #06060B;
     transform: translateY(-2px);
-    box-shadow: 0 0 28px rgba(0, 212, 255, 0.45);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.55);
   }
 }
 
@@ -162,35 +161,22 @@ a {
   font-family: var(--font-heading);
 
   &:hover {
-    border-color: var(--color-neon);
-    color: var(--color-neon);
-    background: var(--color-neon-dim);
+    border-color: var(--color-border-glow);
+    color: var(--color-text);
+    background: rgba(255, 255, 255, 0.04);
   }
 }
 
 /* Animated gradient border utility */
 .glow-border {
   position: relative;
-  &::before {
-    content: '';
-    position: absolute;
-    inset: -1px;
-    border-radius: inherit;
-    background: var(--gradient-neon);
-    opacity: 0;
-    transition: opacity 0.4s ease;
-    z-index: -1;
-  }
-  &::after {
-    content: '';
-    position: absolute;
-    inset: 1px;
-    border-radius: inherit;
-    background: var(--color-bg-elevated);
-    z-index: -1;
-  }
-  &:hover::before {
-    opacity: 1;
+  transform: translateZ(0);
+  transition: transform var(--transition), box-shadow var(--transition), border-color var(--transition);
+
+  &:hover {
+    transform: scale(1.02);
+    box-shadow: var(--shadow-card);
+    border-color: var(--color-border);
   }
 }
 

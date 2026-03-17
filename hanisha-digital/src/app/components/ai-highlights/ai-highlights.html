@@ -1,0 +1,44 @@
+<section class="ai-highlights" id="ai-highlights">
+  <div class="container">
+    <header class="ai-highlights-header">
+      <h2 class="section-title">Highlights</h2>
+      <p class="section-subtitle">Latest AI headlines from around the world.</p>
+    </header>
+
+    <div class="ai-highlights-content">
+      @if (loading()) {
+        <div class="ai-loading">
+          <span class="ai-loading-dot"></span>
+          <span class="ai-loading-dot"></span>
+          <span class="ai-loading-dot"></span>
+          <p>Loading latest AI headlines…</p>
+        </div>
+      } @else if (error()) {
+        <div class="ai-error">
+          <p>Unable to load news right now. Please try again later.</p>
+        </div>
+      } @else {
+        <div class="ai-cards">
+          @for (item of items(); track item.link) {
+            <article
+              class="ai-card"
+              [style.background-image]="item.thumbnail ? 'url(' + item.thumbnail + ')' : null"
+            >
+              <div class="ai-card-overlay"></div>
+              <div class="ai-card-inner">
+                <h3 class="ai-card-title">{{ item.title }}</h3>
+                @if (item.description) {
+                  <p class="ai-card-desc">{{ item.description }}…</p>
+                }
+                <div class="ai-card-meta">
+                  <span class="ai-card-source">{{ item.source }}</span>
+                  <span class="ai-card-date">{{ formatDate(item.pubDate) }}</span>
+                </div>
+              </div>
+            </article>
+          }
+        </div>
+      }
+    </div>
+  </div>
+</section>
