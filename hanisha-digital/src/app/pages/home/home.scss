@@ -1,0 +1,20 @@
+.shell {
+  min-height: 100vh;
+  display: grid;
+  place-content: center;
+  padding: 2rem;
+  font-family: system-ui, sans-serif;
+  text-align: center;
+  color: #0f172a;
+}
+
+h1 {
+  margin: 0 0 0.5rem;
+  font-size: 1.75rem;
+  font-weight: 600;
+}
+
+p {
+  margin: 0;
+  color: #64748b;
+}
