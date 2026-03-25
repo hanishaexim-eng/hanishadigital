@@ -10,58 +10,140 @@
   color: var(--text-muted);
 }
 
+/* Alt band: modern mesh, not flat grey-violet */
+.service-block--alt {
+  background:
+    radial-gradient(ellipse 90% 80% at 10% 20%, rgba(124, 58, 237, 0.12), transparent 55%),
+    radial-gradient(ellipse 70% 60% at 90% 80%, rgba(6, 182, 212, 0.1), transparent 50%),
+    linear-gradient(180deg, rgba(99, 102, 241, 0.06) 0%, rgba(15, 23, 42, 0.02) 100%);
+  border-block-color: rgba(99, 102, 241, 0.12);
+}
+
+[data-theme='dark'] .service-block--alt {
+  background:
+    radial-gradient(ellipse 90% 80% at 10% 20%, rgba(124, 58, 237, 0.18), transparent 55%),
+    radial-gradient(ellipse 70% 60% at 90% 80%, rgba(6, 182, 212, 0.12), transparent 50%),
+    linear-gradient(180deg, rgba(99, 102, 241, 0.08) 0%, rgba(15, 23, 42, 0.4) 100%);
+}
+
 .service-block {
   border-block: 1px solid var(--border);
 }
 
-.service-block--alt {
-  background: rgba(99, 102, 241, 0.04);
-}
-
+/*
+ * Critical fix: old layout used `200px 1fr`. With DOM [text, art], text was trapped in 200px.
+ * Use named areas so copy always gets the wide column.
+ */
 .service-block__inner {
   display: grid;
-  grid-template-columns: 200px 1fr;
-  gap: 2rem;
+  gap: clamp(1.75rem, 5vw, 3.5rem);
   align-items: center;
+
+  &--media-start {
+    grid-template-columns: minmax(260px, 360px) minmax(0, 1fr);
+    grid-template-areas: 'media content';
+  }
+
+  &--media-end {
+    grid-template-columns: minmax(0, 1fr) minmax(260px, 380px);
+    grid-template-areas: 'content media';
+  }
 
   @media (max-width: 768px) {
     grid-template-columns: 1fr;
-  }
 
-  &--rev {
-    @media (min-width: 769px) {
-      .service-block__art {
-        order: 2;
-      }
+    &--media-start {
+      grid-template-areas:
+        'media'
+        'content';
+    }
+
+    /* Copy first, then illustration */
+    &--media-end {
+      grid-template-areas:
+        'content'
+        'media';
     }
   }
+}
+
+.service-block__art {
+  grid-area: media;
+}
+
+.service-block__text {
+  grid-area: content;
+  max-width: 58ch; /* comfortable line length without skinny column */
+  width: 100%;
 
   h2 {
-    margin: 0 0 0.75rem;
-    font-size: 1.5rem;
+    margin: 0 0 0.85rem;
+    font-size: clamp(1.5rem, 2.5vw, 1.85rem);
+    font-weight: 700;
+    letter-spacing: -0.03em;
+    background: linear-gradient(120deg, #6366f1 0%, #7c3aed 50%, #0891b2 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
   }
 
   p {
-    margin: 0 0 1rem;
-    color: var(--text-muted);
-    line-height: 1.7;
+    margin: 0 0 1.15rem;
+    font-size: 1.05rem;
+    line-height: 1.75;
+    color: var(--text);
+    opacity: 0.9;
   }
 
   ul {
     margin: 0;
-    padding-left: 1.2rem;
-    color: var(--text-muted);
-    line-height: 1.75;
+    padding-left: 1.15rem;
+    line-height: 1.8;
+    font-size: 0.98rem;
+    color: var(--text);
+    opacity: 0.88;
+
+    li {
+      padding-left: 0.15rem;
+      margin-bottom: 0.35rem;
+
+      &::marker {
+        color: #6366f1;
+      }
+    }
   }
 }
 
 .blob-svg {
   width: 100%;
-  max-width: 200px;
+  max-width: 220px;
   height: auto;
   margin-inline: auto;
   display: block;
-  filter: drop-shadow(0 12px 32px rgba(99, 102, 241, 0.2));
+  filter: drop-shadow(0 16px 40px rgba(99, 102, 241, 0.35));
+}
+
+.blob-svg--ecom {
+  max-width: 280px;
+}
+
+.service-block__art--ecom {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  border-radius: var(--radius-lg, 24px);
+  background: linear-gradient(145deg, rgba(255, 255, 255, 0.12), rgba(255, 255, 255, 0.02));
+  border: 1px solid rgba(148, 163, 184, 0.25);
+  backdrop-filter: blur(12px);
+  box-shadow:
+    0 4px 24px rgba(15, 23, 42, 0.08),
+    inset 0 1px 0 rgba(255, 255, 255, 0.12);
+}
+
+[data-theme='dark'] .service-block__art--ecom {
+  background: linear-gradient(145deg, rgba(99, 102, 241, 0.15), rgba(15, 23, 42, 0.55));
+  border-color: rgba(129, 140, 248, 0.25);
 }
 
 .cta-bottom {

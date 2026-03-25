@@ -1,26 +1,70 @@
-<header class="header" [class.header--open]="menuOpen">
-  <div class="container header__inner">
-    <a routerLink="/" class="header__brand" (click)="closeMenu()">
-      <span class="header__logo" aria-hidden="true"></span>
-      <span class="header__name">Hanisha <span>Exim</span></span>
+<header
+  class="sticky top-0 z-[100] border-b border-slate-200/80 bg-white/80 backdrop-blur-xl dark:border-slate-800/80 dark:bg-slate-950/80"
+  [ngClass]="{ 'shadow-md shadow-slate-900/5 dark:shadow-black/40': menuOpen }"
+>
+  <div class="mx-auto flex max-w-7xl items-center justify-between gap-4 px-4 py-3 sm:px-6 lg:px-8">
+    <a routerLink="/" class="group flex items-center gap-2.5" (click)="closeMenu()">
+      <span
+        class="flex h-9 w-9 items-center justify-center rounded-xl bg-gradient-to-br from-indigo-500 via-violet-500 to-cyan-400 shadow-lg shadow-indigo-500/30 ring-1 ring-white/20"
+        aria-hidden="true"
+      ></span>
+      <span class="font-display text-lg font-semibold tracking-tight text-slate-900 dark:text-white">
+        Hanisha <span class="bg-gradient-to-r from-indigo-500 to-cyan-400 bg-clip-text text-transparent">Exim</span>
+      </span>
     </a>
 
-    <nav class="header__nav" [attr.aria-expanded]="menuOpen">
-      <a routerLink="/" routerLinkActive="is-active" [routerLinkActiveOptions]="{ exact: true }" (click)="closeMenu()">Home</a>
-      <a routerLink="/services" routerLinkActive="is-active" (click)="closeMenu()">Services</a>
-      <a routerLink="/pricing" routerLinkActive="is-active" (click)="closeMenu()">Pricing</a>
-      <a routerLink="/about" routerLinkActive="is-active" (click)="closeMenu()">About</a>
-      <a routerLink="/blog" routerLinkActive="is-active" (click)="closeMenu()">Blog</a>
-      <a routerLink="/contact" routerLinkActive="is-active" (click)="closeMenu()">Contact</a>
+    <nav
+      class="flex-col gap-0.5 rounded-2xl md:static md:flex md:flex-row md:items-center md:gap-1 md:bg-transparent md:p-0 md:shadow-none max-md:fixed max-md:inset-x-0 max-md:top-[57px] max-md:z-[101] max-md:max-h-[min(70vh,calc(100dvh-4rem))] max-md:overflow-y-auto max-md:border-b max-md:border-slate-200/80 max-md:bg-white/95 max-md:px-4 max-md:py-4 max-md:backdrop-blur-xl dark:max-md:border-slate-800/80 dark:max-md:bg-slate-950/95"
+      [ngClass]="menuOpen ? 'flex' : 'hidden md:flex'"
+    >
+      @for (link of navLinks; track link.path) {
+        <a
+          [routerLink]="link.path"
+          routerLinkActive="bg-slate-100 text-indigo-600 dark:bg-slate-800/90 dark:text-indigo-300"
+          [routerLinkActiveOptions]="link.exact ? { exact: true } : { exact: false }"
+          class="rounded-xl px-3 py-2.5 text-sm font-medium text-slate-600 transition hover:bg-slate-100 hover:text-slate-900 dark:text-slate-300 dark:hover:bg-slate-800/80 dark:hover:text-white md:py-2"
+          (click)="closeMenu()"
+        >
+          {{ link.label }}
+        </a>
+      }
     </nav>
 
-    <div class="header__actions">
-      <button type="button" class="header__theme" (click)="toggleTheme()" [attr.aria-label]="theme.mode() === 'dark' ? 'Switch to light mode' : 'Switch to dark mode'">
-        <span class="header__theme-icon" [class.header__theme-icon--sun]="theme.mode() === 'dark'"></span>
+    <div class="flex shrink-0 items-center gap-2">
+      <button
+        type="button"
+        class="flex h-10 w-10 items-center justify-center rounded-xl border border-slate-200/80 bg-white/90 text-slate-700 transition hover:border-indigo-300 hover:text-indigo-600 dark:border-slate-700 dark:bg-slate-900/90 dark:text-slate-200 dark:hover:border-indigo-500 dark:hover:text-indigo-300"
+        (click)="toggleTheme()"
+        [attr.aria-label]="theme.mode() === 'dark' ? 'Switch to light mode' : 'Switch to dark mode'"
+      >
+        @if (theme.mode() === 'dark') {
+          <span class="text-lg" aria-hidden="true">☀️</span>
+        } @else {
+          <span class="text-lg" aria-hidden="true">🌙</span>
+        }
       </button>
-      <a routerLink="/contact" class="btn btn--primary header__cta" (click)="closeMenu()">Get Started</a>
-      <button type="button" class="header__burger" (click)="toggleMenu()" [attr.aria-label]="menuOpen ? 'Close menu' : 'Open menu'">
-        <span></span><span></span><span></span>
+      <a
+        routerLink="/contact"
+        class="hidden rounded-full bg-gradient-to-r from-indigo-600 via-violet-600 to-cyan-500 px-5 py-2.5 text-sm font-semibold text-white shadow-lg shadow-indigo-500/25 transition hover:shadow-indigo-500/40 sm:inline-flex"
+        (click)="closeMenu()"
+      >
+        Get Started
+      </a>
+      <button
+        type="button"
+        class="relative flex h-10 w-10 flex-col items-center justify-center gap-1.5 rounded-xl border border-slate-200/80 bg-white/90 md:hidden dark:border-slate-700 dark:bg-slate-900/90"
+        (click)="toggleMenu()"
+        [attr.aria-label]="menuOpen ? 'Close menu' : 'Open menu'"
+      >
+        <span
+          class="h-0.5 w-5 origin-center rounded-full bg-slate-800 transition dark:bg-slate-200"
+          [ngClass]="{ 'translate-y-[5px] rotate-45': menuOpen }"
+        ></span>
+        <span class="h-0.5 w-5 rounded-full bg-slate-800 transition dark:bg-slate-200" [ngClass]="{ 'opacity-0': menuOpen }"></span>
+        <span
+          class="h-0.5 w-5 origin-center rounded-full bg-slate-800 transition dark:bg-slate-200"
+          [ngClass]="{ '-translate-y-[5px] -rotate-45': menuOpen }"
+        ></span>
       </button>
     </div>
   </div>

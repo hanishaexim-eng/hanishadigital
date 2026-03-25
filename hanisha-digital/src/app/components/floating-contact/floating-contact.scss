@@ -1,0 +1,80 @@
+.fab {
+  position: fixed;
+  right: 1rem;
+  bottom: 1rem;
+  z-index: 90;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 0.65rem;
+}
+
+.fab__btn {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 3.25rem;
+  padding: 0 1.25rem;
+  border-radius: 999px;
+  font-weight: 600;
+  font-size: 0.9rem;
+  cursor: pointer;
+  overflow: hidden;
+  border: none;
+  text-decoration: none;
+  transition: transform 0.2s ease, box-shadow 0.25s ease;
+
+  &:hover {
+    transform: scale(1.04);
+  }
+
+  &:active {
+    transform: scale(0.98);
+  }
+}
+
+.fab__btn--primary {
+  color: #fff;
+  background: linear-gradient(135deg, #6366f1, #7c3aed, #0891b2);
+  box-shadow: 0 10px 40px rgba(99, 102, 241, 0.45);
+}
+
+.fab__btn--ghost {
+  width: 3.25rem;
+  padding: 0;
+  background: rgba(15, 23, 42, 0.85);
+  border: 1px solid rgba(148, 163, 184, 0.25);
+  color: #e2e8f0;
+  backdrop-filter: blur(12px);
+}
+
+.fab__label {
+  position: relative;
+  z-index: 1;
+}
+
+.fab__icon {
+  font-size: 1.15rem;
+  position: relative;
+  z-index: 1;
+}
+
+.fab__ripple {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at 50% 50%, rgba(255, 255, 255, 0.35), transparent 60%);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.fab__btn--primary:active .fab__ripple {
+  opacity: 1;
+}
+
+@media (min-width: 768px) {
+  .fab {
+    right: 1.5rem;
+    bottom: 1.5rem;
+  }
+}

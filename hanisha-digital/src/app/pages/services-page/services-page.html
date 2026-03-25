@@ -8,7 +8,7 @@
 </section>
 
 <section id="saas" class="section service-block" appReveal>
-  <div class="container service-block__inner">
+  <div class="container service-block__inner service-block__inner--media-start">
     <div class="service-block__art" aria-hidden="true">
       <svg viewBox="0 0 120 120" class="blob-svg">
         <defs>
@@ -23,7 +23,7 @@
         <rect x="56" y="60" width="28" height="8" rx="4" fill="#fff" opacity="0.35" />
       </svg>
     </div>
-    <div>
+    <div class="service-block__text">
       <h2>SaaS Development</h2>
       <p>
         Subscription products, multi-tenant architecture, authentication, billing hooks, and admin dashboards — engineered so you can onboard customers with confidence.
@@ -38,8 +38,8 @@
 </section>
 
 <section id="ecommerce" class="section service-block service-block--alt" appReveal>
-  <div class="container service-block__inner service-block__inner--rev">
-    <div>
+  <div class="container service-block__inner service-block__inner--media-end">
+    <div class="service-block__text">
       <h2>Ecommerce Development</h2>
       <p>
         High-converting storefronts with catalog, cart, checkout, and fulfillment workflows — optimized for speed and mobile-first buyers worldwide.
@@ -50,23 +50,56 @@
         <li>SEO-ready pages and structured data foundations</li>
       </ul>
     </div>
-    <div class="service-block__art" aria-hidden="true">
-      <svg viewBox="0 0 120 120" class="blob-svg">
+    <div class="service-block__art service-block__art--ecom" aria-hidden="true">
+      <svg viewBox="0 0 200 200" class="blob-svg blob-svg--ecom" aria-hidden="true">
         <defs>
-          <linearGradient id="sb2" x1="1" y1="0" x2="0" y2="1">
-            <stop offset="0%" stop-color="#a78bfa" />
-            <stop offset="100%" stop-color="#6366f1" />
+          <linearGradient id="ecom-bg" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stop-color="#7c3aed" />
+            <stop offset="45%" stop-color="#6366f1" />
+            <stop offset="100%" stop-color="#06b6d4" />
           </linearGradient>
+          <linearGradient id="ecom-glass" x1="0%" y1="0%" x2="0%" y2="100%">
+            <stop offset="0%" stop-color="rgba(255,255,255,0.45)" />
+            <stop offset="100%" stop-color="rgba(255,255,255,0.08)" />
+          </linearGradient>
+          <filter id="ecom-glow" x="-20%" y="-20%" width="140%" height="140%">
+            <feGaussianBlur stdDeviation="4" result="b" />
+            <feMerge>
+              <feMergeNode in="b" />
+              <feMergeNode in="SourceGraphic" />
+            </feMerge>
+          </filter>
         </defs>
-        <path d="M24 88 L60 32 L96 88 Z" fill="url(#sb2)" opacity="0.9" />
-        <rect x="36" y="72" width="48" height="12" rx="6" fill="#fff" opacity="0.35" />
+        <!-- Soft ambient -->
+        <ellipse cx="100" cy="170" rx="72" ry="14" fill="url(#ecom-bg)" opacity="0.25" />
+        <!-- Card / storefront -->
+        <rect x="28" y="44" width="144" height="112" rx="20" fill="url(#ecom-bg)" opacity="0.95" filter="url(#ecom-glow)" />
+        <rect x="36" y="52" width="128" height="40" rx="10" fill="url(#ecom-glass)" stroke="rgba(255,255,255,0.35)" stroke-width="1" />
+        <!-- Window grid -->
+        <rect x="48" y="64" width="28" height="20" rx="4" fill="rgba(255,255,255,0.25)" />
+        <rect x="86" y="64" width="28" height="20" rx="4" fill="rgba(255,255,255,0.2)" />
+        <rect x="124" y="64" width="28" height="20" rx="4" fill="rgba(255,255,255,0.15)" />
+        <!-- Cart -->
+        <path
+          d="M52 118 h96 a8 8 0 0 0 8-8 v-12 H48 l-8-36 H28"
+          fill="none"
+          stroke="rgba(255,255,255,0.95)"
+          stroke-width="5"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        />
+        <circle cx="78" cy="162" r="7" fill="rgba(255,255,255,0.9)" />
+        <circle cx="134" cy="162" r="7" fill="rgba(255,255,255,0.9)" />
+        <!-- Accent spark -->
+        <circle cx="156" cy="56" r="6" fill="#fbbf24" opacity="0.95" />
+        <circle cx="44" cy="100" r="4" fill="#22d3ee" opacity="0.9" />
       </svg>
     </div>
   </div>
 </section>
 
 <section id="healthcare" class="section service-block" appReveal>
-  <div class="container service-block__inner">
+  <div class="container service-block__inner service-block__inner--media-start">
     <div class="service-block__art" aria-hidden="true">
       <svg viewBox="0 0 120 120" class="blob-svg">
         <defs>
@@ -79,7 +112,7 @@
         <path d="M60 40 v40 M40 60 h40" stroke="#fff" stroke-width="6" stroke-linecap="round" opacity="0.9" />
       </svg>
     </div>
-    <div>
+    <div class="service-block__text">
       <h2>Healthcare &amp; Clinical Software</h2>
       <p>
         Patient and clinician workflows, scheduling, records handoffs, and secure integrations — built with compliance-minded patterns for regulated environments.

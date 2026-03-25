@@ -1,0 +1,10 @@
+@import 'tailwindcss';
+
+/* Scan app sources under src/ (paths are relative to this file) */
+@source '.';
+
+@theme {
+  --font-sans: 'Inter', ui-sans-serif, system-ui, sans-serif;
+  --font-display: 'Poppins', ui-sans-serif, system-ui, sans-serif;
+  --font-family-display: var(--font-display);
+}

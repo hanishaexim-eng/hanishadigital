@@ -14,7 +14,9 @@ export class ThemeService {
   constructor() {
     effect(() => {
       const m = this.mode();
-      this.doc.documentElement.setAttribute('data-theme', m);
+      const el = this.doc.documentElement;
+      el.setAttribute('data-theme', m);
+      el.classList.toggle('dark', m === 'dark');
       try {
         localStorage.setItem(STORAGE_KEY, m);
       } catch {

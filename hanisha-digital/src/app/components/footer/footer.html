@@ -1,23 +1,25 @@
-<footer class="footer">
-  <div class="container footer__grid">
-    <div class="footer__brand">
-      <p class="footer__title">Hanisha Exim</p>
-      <p class="footer__tagline">Affordable IT Services for Global Startups</p>
+<footer class="footer border-t border-slate-200/80 bg-white/75 backdrop-blur-xl dark:border-slate-800/80 dark:bg-slate-950/80">
+  <div class="mx-auto max-w-7xl px-4 py-14 sm:px-6 lg:px-8">
+    <div class="grid gap-10 md:grid-cols-3">
+      <div>
+        <p class="font-display text-lg font-bold text-slate-900 dark:text-white">Hanisha Exim</p>
+        <p class="mt-2 max-w-xs text-sm text-slate-600 dark:text-slate-400">Affordable IT Services for Global Startups</p>
+      </div>
+      <div class="flex flex-col gap-2">
+        <p class="text-xs font-bold uppercase tracking-widest text-slate-500 dark:text-slate-500">Company</p>
+        <a routerLink="/about" class="text-sm text-slate-600 transition hover:text-indigo-600 dark:text-slate-400 dark:hover:text-indigo-400">About</a>
+        <a routerLink="/services" class="text-sm text-slate-600 transition hover:text-indigo-600 dark:text-slate-400 dark:hover:text-indigo-400">Services</a>
+        <a routerLink="/pricing" class="text-sm text-slate-600 transition hover:text-indigo-600 dark:text-slate-400 dark:hover:text-indigo-400">Pricing</a>
+        <a routerLink="/blog" class="text-sm text-slate-600 transition hover:text-indigo-600 dark:text-slate-400 dark:hover:text-indigo-400">Blog</a>
+      </div>
+      <div class="flex flex-col gap-2">
+        <p class="text-xs font-bold uppercase tracking-widest text-slate-500 dark:text-slate-500">Contact</p>
+        <a href="mailto:hanishaexim@gmail.com" class="text-sm font-medium text-indigo-600 hover:underline dark:text-indigo-400">hanishaexim@gmail.com</a>
+        <a routerLink="/contact" class="text-sm text-slate-600 transition hover:text-indigo-600 dark:text-slate-400 dark:hover:text-indigo-400">Contact form</a>
+      </div>
     </div>
-    <div class="footer__links">
-      <p class="footer__label">Company</p>
-      <a routerLink="/about">About</a>
-      <a routerLink="/services">Services</a>
-      <a routerLink="/pricing">Pricing</a>
-      <a routerLink="/blog">Blog</a>
+    <div class="mt-12 border-t border-slate-200/80 pt-8 text-center text-xs text-slate-500 dark:border-slate-800/80 dark:text-slate-500">
+      <p>&copy; {{ year }} Hanisha Exim. All rights reserved.</p>
     </div>
-    <div class="footer__links">
-      <p class="footer__label">Contact</p>
-      <a href="mailto:hanishaexim@gmail.com">hanishaexim@gmail.com</a>
-      <a routerLink="/contact">Contact form</a>
-    </div>
-  </div>
-  <div class="container footer__bottom">
-    <p>&copy; {{ year }} Hanisha Exim. All rights reserved.</p>
   </div>
 </footer>

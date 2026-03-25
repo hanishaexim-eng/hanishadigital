@@ -1,192 +1,287 @@
 <!-- Hero -->
-<section class="hero" appReveal>
-  <div class="container hero__grid">
-    <div class="hero__copy">
-      <p class="hero__eyebrow">Global IT · Startup-focused</p>
-      <h1 class="hero__title">Build Your Startup with Affordable IT Solutions</h1>
-      <p class="hero__sub">
-        We help startups launch faster with SaaS, Ecommerce, and custom software — scalable, transparent, and built for founders worldwide.
+<section class="relative overflow-hidden px-4 pb-20 pt-12 sm:px-6 sm:pb-28 sm:pt-16 lg:px-8" appReveal>
+  <div class="hero-blobs pointer-events-none absolute inset-0 -z-10" aria-hidden="true"></div>
+  <div class="relative mx-auto max-w-7xl">
+    <div class="mx-auto max-w-3xl text-center">
+      <p
+        class="mb-4 inline-flex items-center gap-2 rounded-full border border-indigo-500/20 bg-indigo-500/10 px-4 py-1.5 text-xs font-semibold uppercase tracking-wider text-indigo-600 dark:border-indigo-400/30 dark:bg-indigo-500/15 dark:text-indigo-300"
+      >
+        Global IT · Startup export partner
       </p>
-      <div class="hero__cta">
-        <a routerLink="/contact" class="btn btn--primary btn--lg">Get Started</a>
-        <a routerLink="/contact" class="btn btn--ghost btn--lg">Contact Us</a>
+      <h1 class="font-display text-4xl font-bold leading-tight tracking-tight text-slate-900 sm:text-5xl lg:text-6xl dark:text-white">
+        Affordable IT Solutions for
+        <span class="bg-gradient-to-r from-indigo-600 via-violet-500 to-cyan-500 bg-clip-text text-transparent">Global Startups</span>
+      </h1>
+      <p class="mx-auto mt-6 max-w-2xl text-lg text-slate-600 dark:text-slate-300">
+        We help startups build SaaS, Ecommerce, and Healthcare platforms at low cost — with fast MVPs, transparent scope, and architecture that scales.
+      </p>
+      <div class="mt-10 flex flex-wrap items-center justify-center gap-4">
+        <a
+          routerLink="/contact"
+          class="inline-flex min-h-[48px] min-w-[160px] items-center justify-center rounded-full bg-gradient-to-r from-indigo-600 via-violet-600 to-cyan-500 px-8 py-3 text-sm font-semibold text-white shadow-xl shadow-indigo-500/30 transition hover:-translate-y-0.5 hover:shadow-indigo-500/45"
+        >
+          Get Started
+        </a>
+        <button
+          type="button"
+          (click)="lead.show()"
+          class="inline-flex min-h-[48px] min-w-[160px] items-center justify-center rounded-full border border-slate-300/80 bg-white/80 px-8 py-3 text-sm font-semibold text-slate-900 backdrop-blur transition hover:border-indigo-400 hover:bg-white dark:border-slate-600 dark:bg-slate-900/80 dark:text-white dark:hover:border-indigo-500"
+        >
+          Book Consultation
+        </button>
       </div>
     </div>
-    <div class="hero__art" aria-hidden="true">
-      <svg class="hero__svg" viewBox="0 0 400 320" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <defs>
-          <linearGradient id="g1" x1="0" y1="0" x2="1" y2="1">
-            <stop offset="0%" stop-color="#6366f1" />
-            <stop offset="100%" stop-color="#22d3ee" />
-          </linearGradient>
-          <linearGradient id="g2" x1="0" y1="1" x2="1" y2="0">
-            <stop offset="0%" stop-color="#a78bfa" />
-            <stop offset="100%" stop-color="#6366f1" />
-          </linearGradient>
-        </defs>
-        <ellipse cx="200" cy="280" rx="140" ry="24" fill="url(#g1)" opacity="0.25" />
-        <path d="M200 48 L260 200 L140 200 Z" fill="url(#g1)" opacity="0.9" />
-        <circle cx="200" cy="120" r="64" fill="url(#g2)" stroke="rgba(255,255,255,0.2)" stroke-width="4" />
-        <circle cx="200" cy="120" r="28" fill="#0f172a" opacity="0.15" />
-        <path d="M80 180 Q200 100 320 180" stroke="url(#g1)" stroke-width="6" stroke-linecap="round" fill="none" opacity="0.6" />
-        <rect x="160" y="200" width="80" height="56" rx="12" fill="url(#g1)" opacity="0.85" />
-        <circle cx="200" cy="228" r="8" fill="#fff" opacity="0.9" />
-      </svg>
+  </div>
+</section>
+
+<!-- Services -->
+<section id="services" class="scroll-mt-24 px-4 py-16 sm:px-6 lg:px-8" appReveal>
+  <div class="mx-auto max-w-7xl">
+    <div class="mx-auto max-w-2xl text-center">
+      <h2 class="font-display text-3xl font-bold tracking-tight text-slate-900 dark:text-white sm:text-4xl">Services</h2>
+      <p class="mt-3 text-lg text-slate-600 dark:text-slate-400">Product-grade delivery across your core verticals.</p>
+    </div>
+    <div class="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+      <a
+        routerLink="/services"
+        fragment="saas"
+        class="group relative overflow-hidden rounded-2xl border border-slate-200/80 bg-white/60 p-8 shadow-xl shadow-slate-900/5 backdrop-blur-xl transition duration-300 hover:-translate-y-1 hover:scale-[1.02] hover:border-indigo-500/40 hover:shadow-indigo-500/10 dark:border-slate-700/80 dark:bg-slate-900/50 dark:shadow-black/40"
+      >
+        <div class="mb-4 text-3xl" aria-hidden="true">☁️</div>
+        <h3 class="font-display text-xl font-semibold text-slate-900 dark:text-white">SaaS Development</h3>
+        <p class="mt-2 text-slate-600 dark:text-slate-400">Multi-tenant apps, billing, APIs, and admin dashboards.</p>
+        <span class="mt-4 inline-block text-sm font-semibold text-indigo-600 group-hover:translate-x-1 dark:text-indigo-400">Explore →</span>
+      </a>
+      <a
+        routerLink="/services"
+        fragment="ecommerce"
+        class="group relative overflow-hidden rounded-2xl border border-slate-200/80 bg-white/60 p-8 shadow-xl shadow-slate-900/5 backdrop-blur-xl transition duration-300 hover:-translate-y-1 hover:scale-[1.02] hover:border-violet-500/40 hover:shadow-violet-500/10 dark:border-slate-700/80 dark:bg-slate-900/50 dark:shadow-black/40"
+      >
+        <div class="mb-4 text-3xl" aria-hidden="true">🛒</div>
+        <h3 class="font-display text-xl font-semibold text-slate-900 dark:text-white">Ecommerce Development</h3>
+        <p class="mt-2 text-slate-600 dark:text-slate-400">Stores, checkout, catalog, and integrations that convert.</p>
+        <span class="mt-4 inline-block text-sm font-semibold text-violet-600 group-hover:translate-x-1 dark:text-violet-400">Explore →</span>
+      </a>
+      <a
+        routerLink="/services"
+        fragment="healthcare"
+        class="group relative overflow-hidden rounded-2xl border border-slate-200/80 bg-white/60 p-8 shadow-xl shadow-slate-900/5 backdrop-blur-xl transition duration-300 hover:-translate-y-1 hover:scale-[1.02] hover:border-cyan-500/40 hover:shadow-cyan-500/10 dark:border-slate-700/80 dark:bg-slate-900/50 dark:shadow-black/40 sm:col-span-2 lg:col-span-1"
+      >
+        <div class="mb-4 text-3xl" aria-hidden="true">🏥</div>
+        <h3 class="font-display text-xl font-semibold text-slate-900 dark:text-white">Healthcare / Clinical Software</h3>
+        <p class="mt-2 text-slate-600 dark:text-slate-400">Secure workflows and compliance-minded engineering.</p>
+        <span class="mt-4 inline-block text-sm font-semibold text-cyan-600 group-hover:translate-x-1 dark:text-cyan-400">Explore →</span>
+      </a>
     </div>
   </div>
 </section>
 
-<!-- Value prop -->
-<section class="section value" appReveal>
-  <div class="container">
-    <p class="value__line">Affordable IT Services for Global Startups</p>
-  </div>
-</section>
-
-<!-- Features -->
-<section class="section" appReveal>
-  <div class="container">
-    <header class="block-head">
-      <h2>Why founders choose us</h2>
-      <p>Engineering that respects your runway — without cutting corners on quality.</p>
-    </header>
-    <div class="feature-grid">
-      <article class="glass-card feature-card">
-        <span class="feature-card__icon">💸</span>
-        <h3>Low Cost Development</h3>
-        <p>Packages designed for early-stage budgets — clear scope, no surprise invoices.</p>
-      </article>
-      <article class="glass-card feature-card">
-        <span class="feature-card__icon">⚡</span>
-        <h3>Fast Delivery</h3>
-        <p>MVPs in weeks, not quarters — shipped with demos and measurable milestones.</p>
-      </article>
-      <article class="glass-card feature-card">
-        <span class="feature-card__icon">🌍</span>
-        <h3>Global Service</h3>
-        <p>Remote-first teams with timezone-friendly communication for startups anywhere.</p>
-      </article>
-      <article class="glass-card feature-card">
-        <span class="feature-card__icon">📈</span>
-        <h3>Scalable Architecture</h3>
-        <p>Cloud-ready foundations that grow with your product and customer base.</p>
-      </article>
+<!-- Why us -->
+<section class="border-y border-slate-200/80 bg-gradient-to-b from-slate-50/90 to-white px-4 py-16 dark:border-slate-800/80 dark:from-slate-950/90 dark:to-slate-900/80 sm:px-6 lg:px-8" appReveal>
+  <div class="mx-auto max-w-7xl">
+    <div class="mx-auto max-w-2xl text-center">
+      <h2 class="font-display text-3xl font-bold tracking-tight text-slate-900 dark:text-white sm:text-4xl">Why choose Hanisha Exim</h2>
+      <p class="mt-3 text-lg text-slate-600 dark:text-slate-400">Built for founders who need speed without sacrificing quality.</p>
+    </div>
+    <div class="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
+      @for (item of whyUs; track item.t) {
+        <article
+          class="rounded-2xl border border-slate-200/80 bg-white/70 p-6 shadow-lg shadow-slate-900/5 backdrop-blur-md transition hover:-translate-y-0.5 hover:shadow-xl dark:border-slate-700/80 dark:bg-slate-900/60 dark:shadow-black/30"
+        >
+          <span class="text-2xl" aria-hidden="true">{{ item.icon }}</span>
+          <h3 class="mt-3 font-display text-lg font-semibold text-slate-900 dark:text-white">{{ item.t }}</h3>
+          <p class="mt-2 text-sm leading-relaxed text-slate-600 dark:text-slate-400">{{ item.d }}</p>
+        </article>
+      }
     </div>
   </div>
 </section>
 
-<!-- Services preview -->
-<section class="section" appReveal>
-  <div class="container">
-    <header class="block-head">
-      <h2>What we build</h2>
-      <p>End-to-end delivery across SaaS, commerce, and regulated healthcare.</p>
-    </header>
-    <div class="feature-grid feature-grid--3">
-      <a routerLink="/services" fragment="saas" class="glass-card service-card">
-        <div class="service-card__icon">☁️</div>
-        <h3>SaaS Development</h3>
-        <p>Multi-tenant apps, billing, APIs, and dashboards your users will trust.</p>
-        <span class="service-card__link">Learn more →</span>
-      </a>
-      <a routerLink="/services" fragment="ecommerce" class="glass-card service-card">
-        <div class="service-card__icon">🛒</div>
-        <h3>Ecommerce</h3>
-        <p>Stores, checkout, inventory, and integrations that convert and scale.</p>
-        <span class="service-card__link">Learn more →</span>
-      </a>
-      <a routerLink="/services" fragment="healthcare" class="glass-card service-card">
-        <div class="service-card__icon">🏥</div>
-        <h3>Healthcare &amp; Clinical</h3>
-        <p>Secure workflows, HIPAA-aware patterns, and compliance-minded engineering.</p>
-        <span class="service-card__link">Learn more →</span>
-      </a>
+<!-- Pricing snapshot -->
+<section class="px-4 py-16 sm:px-6 lg:px-8" appReveal>
+  <div class="mx-auto max-w-7xl">
+    <div class="mx-auto max-w-2xl text-center">
+      <h2 class="font-display text-3xl font-bold tracking-tight text-slate-900 dark:text-white sm:text-4xl">Pricing</h2>
+      <p class="mt-3 text-lg text-slate-600 dark:text-slate-400">Affordable tiers — from first MVP to scale.</p>
+    </div>
+    <div class="mt-12 grid gap-6 lg:grid-cols-3">
+      <article class="rounded-2xl border border-slate-200/80 bg-white/70 p-8 backdrop-blur dark:border-slate-700/80 dark:bg-slate-900/50">
+        <h3 class="font-display text-lg font-semibold text-slate-900 dark:text-white">Startup Plan</h3>
+        <p class="mt-2 text-3xl font-bold text-indigo-600 dark:text-indigo-400">From $3k–$6k</p>
+        <p class="mt-3 text-sm text-slate-600 dark:text-slate-400">Core MVP, limited integrations, staging handover.</p>
+      </article>
+      <article
+        class="relative rounded-2xl border-2 border-indigo-500/50 bg-gradient-to-b from-indigo-500/10 to-violet-500/5 p-8 shadow-xl shadow-indigo-500/15 backdrop-blur dark:from-indigo-500/20 dark:to-violet-500/10"
+      >
+        <span
+          class="absolute -top-3 left-1/2 -translate-x-1/2 rounded-full bg-gradient-to-r from-indigo-600 to-violet-600 px-3 py-1 text-xs font-bold uppercase tracking-wide text-white"
+          >Best value</span
+        >
+        <h3 class="font-display text-lg font-semibold text-slate-900 dark:text-white">Growth Plan</h3>
+        <p class="mt-2 text-3xl font-bold text-indigo-600 dark:text-indigo-300">From $8k–$15k</p>
+        <p class="mt-3 text-sm text-slate-600 dark:text-slate-300">Full MVP, analytics, multiple integrations, post-launch fixes.</p>
+      </article>
+      <article class="rounded-2xl border border-slate-200/80 bg-white/70 p-8 backdrop-blur dark:border-slate-700/80 dark:bg-slate-900/50">
+        <h3 class="font-display text-lg font-semibold text-slate-900 dark:text-white">Enterprise Plan</h3>
+        <p class="mt-2 text-3xl font-bold text-slate-900 dark:text-white">Custom</p>
+        <p class="mt-3 text-sm text-slate-600 dark:text-slate-400">Dedicated squad, SLA, security reviews, roadmap.</p>
+      </article>
+    </div>
+    <p class="mt-8 text-center">
+      <a routerLink="/pricing" class="text-sm font-semibold text-indigo-600 underline-offset-4 hover:underline dark:text-indigo-400">View full pricing →</a>
+    </p>
+  </div>
+</section>
+
+<!-- Case studies -->
+<section class="border-y border-slate-200/80 bg-slate-50/50 px-4 py-16 dark:border-slate-800/80 dark:bg-slate-950/50 sm:px-6 lg:px-8" appReveal>
+  <div class="mx-auto max-w-7xl">
+    <div class="mx-auto max-w-2xl text-center">
+      <h2 class="font-display text-3xl font-bold tracking-tight text-slate-900 dark:text-white sm:text-4xl">Case studies</h2>
+      <p class="mt-3 text-lg text-slate-600 dark:text-slate-400">Representative outcomes — replace with your client metrics.</p>
+    </div>
+    <div class="mt-12 grid gap-6 md:grid-cols-3">
+      <article
+        class="group rounded-2xl border border-slate-200/80 bg-white/80 p-6 shadow-lg transition hover:-translate-y-1 hover:shadow-2xl dark:border-slate-700/80 dark:bg-slate-900/60"
+      >
+        <p class="text-xs font-bold uppercase tracking-widest text-indigo-600 dark:text-indigo-400">SaaS</p>
+        <h3 class="mt-2 font-display text-lg font-semibold text-slate-900 dark:text-white">B2B analytics MVP</h3>
+        <dl class="mt-4 space-y-2 text-sm">
+          <div class="flex justify-between gap-2 border-t border-slate-200/80 pt-2 dark:border-slate-700/80">
+            <dt class="text-slate-500 dark:text-slate-400">Time to demo</dt>
+            <dd class="font-semibold text-emerald-600 dark:text-emerald-400">5 weeks</dd>
+          </div>
+          <div class="flex justify-between gap-2">
+            <dt class="text-slate-500 dark:text-slate-400">Infra cost</dt>
+            <dd class="font-semibold text-slate-900 dark:text-white">−32% vs legacy</dd>
+          </div>
+        </dl>
+      </article>
+      <article
+        class="group rounded-2xl border border-slate-200/80 bg-white/80 p-6 shadow-lg transition hover:-translate-y-1 hover:shadow-2xl dark:border-slate-700/80 dark:bg-slate-900/60"
+      >
+        <p class="text-xs font-bold uppercase tracking-widest text-violet-600 dark:text-violet-400">Ecommerce</p>
+        <h3 class="mt-2 font-display text-lg font-semibold text-slate-900 dark:text-white">D2C launch</h3>
+        <dl class="mt-4 space-y-2 text-sm">
+          <div class="flex justify-between gap-2 border-t border-slate-200/80 pt-2 dark:border-slate-700/80">
+            <dt class="text-slate-500 dark:text-slate-400">Checkout speed</dt>
+            <dd class="font-semibold text-emerald-600 dark:text-emerald-400">+41%</dd>
+          </div>
+          <div class="flex justify-between gap-2">
+            <dt class="text-slate-500 dark:text-slate-400">Mobile CVR</dt>
+            <dd class="font-semibold text-slate-900 dark:text-white">+18%</dd>
+          </div>
+        </dl>
+      </article>
+      <article
+        class="group rounded-2xl border border-slate-200/80 bg-white/80 p-6 shadow-lg transition hover:-translate-y-1 hover:shadow-2xl dark:border-slate-700/80 dark:bg-slate-900/60"
+      >
+        <p class="text-xs font-bold uppercase tracking-widest text-cyan-600 dark:text-cyan-400">Healthcare</p>
+        <h3 class="mt-2 font-display text-lg font-semibold text-slate-900 dark:text-white">Clinic workflow pilot</h3>
+        <dl class="mt-4 space-y-2 text-sm">
+          <div class="flex justify-between gap-2 border-t border-slate-200/80 pt-2 dark:border-slate-700/80">
+            <dt class="text-slate-500 dark:text-slate-400">Admin time saved</dt>
+            <dd class="font-semibold text-emerald-600 dark:text-emerald-400">12 hrs/wk</dd>
+          </div>
+          <div class="flex justify-between gap-2">
+            <dt class="text-slate-500 dark:text-slate-400">Pilot adoption</dt>
+            <dd class="font-semibold text-slate-900 dark:text-white">94% staff</dd>
+          </div>
+        </dl>
+      </article>
     </div>
   </div>
 </section>
 
 <!-- Testimonials -->
-<section class="section section--muted" appReveal>
-  <div class="container">
-    <header class="block-head">
-      <h2>Founder stories</h2>
-      <p>Sample testimonials — replace with your real client quotes when you ship.</p>
-    </header>
-    <div class="feature-grid feature-grid--3">
-      <figure class="glass-card quote-card">
-        <blockquote>“We went from idea to demo in 4 weeks. Communication was clear and the stack was clean.”</blockquote>
-        <figcaption>— Alex M., SaaS founder</figcaption>
-      </figure>
-      <figure class="glass-card quote-card">
-        <blockquote>“Finally a team that understood MVP scope. No bloat — just what we needed to raise.”</blockquote>
-        <figcaption>— Priya R., Ecommerce startup</figcaption>
-      </figure>
-      <figure class="glass-card quote-card">
-        <blockquote>“Clinical workflows are complex; they delivered a usable system we could pilot with real staff.”</blockquote>
-        <figcaption>— Dr. James L., Healthtech</figcaption>
-      </figure>
-    </div>
-  </div>
-</section>
-
-<!-- FAQ -->
-<section class="section" appReveal>
-  <div class="container container--narrow">
-    <header class="block-head">
-      <h2>FAQ</h2>
-      <p>Quick answers for global startups evaluating a build partner.</p>
-    </header>
-    <div class="faq">
-      <details class="faq__item glass-card">
-        <summary>How fast can you ship an MVP?</summary>
-        <p>Many MVPs land in 4–8 weeks depending on scope and integrations. We align on milestones weekly.</p>
-      </details>
-      <details class="faq__item glass-card">
-        <summary>Do you work with startups outside India?</summary>
-        <p>Yes — we are built for remote delivery and async-friendly collaboration across time zones.</p>
-      </details>
-      <details class="faq__item glass-card">
-        <summary>What’s included in pricing?</summary>
-        <p>See our <a routerLink="/pricing">pricing page</a> for starter-friendly packages. Custom quotes for enterprise needs.</p>
-      </details>
-    </div>
-  </div>
-</section>
-
-<!-- Blog preview -->
-<section class="section section--muted" appReveal>
-  <div class="container">
-    <header class="block-head">
-      <h2>From the blog</h2>
-      <p>SEO-friendly guides for founders — MVP, cost, and product strategy.</p>
-    </header>
-    <div class="feature-grid feature-grid--3">
-      <article class="glass-card blog-card">
-        <h3><a routerLink="/blog">How to build a startup app in 30 days</a></h3>
-        <p class="blog-card__meta">MVP · Planning · 2026</p>
-        <p>A practical roadmap from scope to launch — without burning your runway.</p>
-      </article>
-      <article class="glass-card blog-card">
-        <h3><a routerLink="/blog">Cost to build an MVP in the USA (2026)</a></h3>
-        <p class="blog-card__meta">Budget · Startups · 2026</p>
-        <p>What drives price, and how to keep your first release lean and testable.</p>
-      </article>
-      <article class="glass-card blog-card">
-        <h3><a routerLink="/blog">MVP vs full product</a></h3>
-        <p class="blog-card__meta">Product · Strategy</p>
-        <p>When to ship thin, when to invest deep — a founder’s guide.</p>
-      </article>
+<section class="px-4 py-16 sm:px-6 lg:px-8" appReveal>
+  <div class="mx-auto max-w-7xl">
+    <h2 class="text-center font-display text-3xl font-bold text-slate-900 dark:text-white sm:text-4xl">What founders say</h2>
+    <div class="mt-12 grid gap-6 md:grid-cols-3">
+      @for (q of testimonials; track q.author) {
+        <figure
+          class="rounded-2xl border border-slate-200/80 bg-white/70 p-6 backdrop-blur dark:border-slate-700/80 dark:bg-slate-900/50"
+        >
+          <blockquote class="text-slate-700 dark:text-slate-300">“{{ q.quote }}”</blockquote>
+          <figcaption class="mt-4 text-sm font-medium text-slate-500 dark:text-slate-400">— {{ q.author }}, {{ q.role }}</figcaption>
+        </figure>
+      }
     </div>
   </div>
 </section>
 
 <!-- CTA -->
-<section class="section cta" appReveal>
-  <div class="container">
-    <div class="cta__box glass-card">
-      <h2>Ready to build?</h2>
-      <p>Tell us about your product — we’ll reply with a scope and next steps.</p>
-      <a routerLink="/contact" class="btn btn--primary btn--lg">Start a conversation</a>
+<section class="px-4 py-16 sm:px-6 lg:px-8" appReveal>
+  <div class="mx-auto max-w-4xl rounded-3xl border border-indigo-500/20 bg-gradient-to-br from-indigo-600/90 via-violet-600/90 to-cyan-600/85 p-10 text-center shadow-2xl shadow-indigo-500/25 backdrop-blur-xl dark:from-indigo-900/80 dark:via-violet-900/70 dark:to-cyan-900/60">
+    <h2 class="font-display text-2xl font-bold text-white sm:text-3xl">Start Your Startup Today</h2>
+    <p class="mt-3 text-indigo-100">
+      Email
+      <a href="mailto:hanishaexim@gmail.com" class="font-semibold text-white underline decoration-white/40 underline-offset-4 hover:decoration-white">hanishaexim@gmail.com</a>
+      — we respond within one business day.
+    </p>
+    <div class="mt-8 flex flex-wrap justify-center gap-4">
+      <a
+        routerLink="/contact"
+        class="inline-flex rounded-full bg-white px-8 py-3 text-sm font-semibold text-indigo-700 shadow-lg transition hover:bg-indigo-50 dark:text-indigo-900"
+        >Contact us</a
+      >
+      <button
+        type="button"
+        (click)="lead.show()"
+        class="inline-flex rounded-full border border-white/40 bg-white/10 px-8 py-3 text-sm font-semibold text-white backdrop-blur transition hover:bg-white/20"
+      >
+        Quick lead form
+      </button>
+    </div>
+  </div>
+</section>
+
+<!-- Blog -->
+<section class="border-t border-slate-200/80 bg-slate-50/40 px-4 py-16 dark:border-slate-800/80 dark:bg-slate-950/40 sm:px-6 lg:px-8" appReveal>
+  <div class="mx-auto max-w-7xl">
+    <div class="flex flex-col items-start justify-between gap-4 sm:flex-row sm:items-end">
+      <div>
+        <h2 class="font-display text-3xl font-bold text-slate-900 dark:text-white">Blog</h2>
+        <p class="mt-2 text-slate-600 dark:text-slate-400">SEO-ready guides for founders.</p>
+      </div>
+      <a routerLink="/blog" class="text-sm font-semibold text-indigo-600 hover:underline dark:text-indigo-400">View all →</a>
+    </div>
+    <div class="mt-10 grid gap-6 md:grid-cols-3">
+      <article class="rounded-2xl border border-slate-200/80 bg-white/80 p-6 dark:border-slate-700/80 dark:bg-slate-900/50">
+        <h3 class="font-display text-lg font-semibold text-slate-900 dark:text-white">
+          <a routerLink="/blog" class="hover:text-indigo-600 dark:hover:text-indigo-400">How to build a startup app in 30 days</a>
+        </h3>
+        <p class="mt-2 text-sm text-slate-600 dark:text-slate-400">MVP timeline, scope, and what to cut first.</p>
+      </article>
+      <article class="rounded-2xl border border-slate-200/80 bg-white/80 p-6 dark:border-slate-700/80 dark:bg-slate-900/50">
+        <h3 class="font-display text-lg font-semibold text-slate-900 dark:text-white">
+          <a routerLink="/blog" class="hover:text-indigo-600 dark:hover:text-indigo-400">MVP cost in the USA (2026)</a>
+        </h3>
+        <p class="mt-2 text-sm text-slate-600 dark:text-slate-400">Budget drivers and how to stay lean.</p>
+      </article>
+      <article class="rounded-2xl border border-slate-200/80 bg-white/80 p-6 dark:border-slate-700/80 dark:bg-slate-900/50">
+        <h3 class="font-display text-lg font-semibold text-slate-900 dark:text-white">
+          <a routerLink="/blog" class="hover:text-indigo-600 dark:hover:text-indigo-400">MVP vs full product</a>
+        </h3>
+        <p class="mt-2 text-sm text-slate-600 dark:text-slate-400">When to ship thin vs invest deep.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="px-4 pb-20 pt-4 sm:px-6 lg:px-8" appReveal>
+  <div class="mx-auto max-w-2xl">
+    <h2 class="text-center font-display text-2xl font-bold text-slate-900 dark:text-white">FAQ</h2>
+    <div class="mt-8 space-y-3">
+      <details class="group rounded-2xl border border-slate-200/80 bg-white/70 p-4 backdrop-blur dark:border-slate-700/80 dark:bg-slate-900/50">
+        <summary class="cursor-pointer font-semibold text-slate-900 dark:text-white">Do you work with startups outside India?</summary>
+        <p class="mt-2 text-sm text-slate-600 dark:text-slate-400">Yes — we’re built for remote delivery and async collaboration worldwide.</p>
+      </details>
+      <details class="group rounded-2xl border border-slate-200/80 bg-white/70 p-4 backdrop-blur dark:border-slate-700/80 dark:bg-slate-900/50">
+        <summary class="cursor-pointer font-semibold text-slate-900 dark:text-white">How fast is an MVP?</summary>
+        <p class="mt-2 text-sm text-slate-600 dark:text-slate-400">Many MVPs ship in 4–8 weeks depending on scope; we align weekly milestones.</p>
+      </details>
     </div>
   </div>
 </section>

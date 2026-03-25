@@ -1,7 +1,9 @@
-/* Hanisha Exim — design tokens + base */
+/* Tailwind utilities: edit src/tailwind.input.css, run npm run build:tailwind, commit src/tailwind.generated.css */
+
+/* Hanisha Exim — design tokens + base (legacy pages + components) */
 :root {
-  --font-sans: 'Plus Jakarta Sans', system-ui, sans-serif;
-  --font-display: 'Outfit', 'Plus Jakarta Sans', system-ui, sans-serif;
+  --font-sans: 'Inter', system-ui, sans-serif;
+  --font-display: 'Poppins', 'Inter', system-ui, sans-serif;
 
   --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
   --radius-sm: 10px;
@@ -59,21 +61,24 @@ body {
   margin: 0;
   min-height: 100%;
   overflow-x: hidden;
-  font-family: var(--font-sans);
+  font-family: var(--font-sans), 'Inter', system-ui, sans-serif;
   font-size: 1rem;
   line-height: 1.65;
   color: var(--text);
-  background: var(--bg-page);
-  background-image: var(--gradient-mesh), var(--noise);
-  background-attachment: fixed;
-  transition: background-color 0.4s var(--ease-out), color 0.4s var(--ease-out);
+  background-color: #f8fafc;
+  transition: background-color 0.35s ease, color 0.35s ease;
 }
 
+.dark body {
+  background-color: #020617;
+}
+
+.font-display,
 h1,
 h2,
 h3,
 h4 {
-  font-family: var(--font-display);
+  font-family: var(--font-display), 'Poppins', 'Inter', system-ui, sans-serif;
   font-weight: 600;
   letter-spacing: -0.02em;
   line-height: 1.2;
