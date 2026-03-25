@@ -121,14 +121,20 @@
   padding: 0.85rem 1rem;
   border: none;
   border-radius: 999px;
-  font-weight: 600;
+  font-weight: 700;
   cursor: pointer;
   color: #fff;
-  background: linear-gradient(135deg, #6366f1, #8b5cf6, #06b6d4);
+  background: linear-gradient(135deg, #f97316, #ea580c, #d97706);
+  box-shadow: 0 8px 28px rgba(249, 115, 22, 0.45);
   transition: transform 0.2s ease, box-shadow 0.2s ease;
 
   &:hover {
-    transform: translateY(-1px);
-    box-shadow: 0 12px 32px rgba(99, 102, 241, 0.4);
+    transform: translateY(-2px);
+    background: linear-gradient(135deg, #fb923c, #f97316, #f59e0b);
+    box-shadow: 0 12px 36px rgba(249, 115, 22, 0.55);
+  }
+
+  &:active {
+    transform: translateY(0) scale(0.98);
   }
 }

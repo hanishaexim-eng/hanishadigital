@@ -6,3 +6,22 @@
 .font-display {
   font-family: var(--font-display, 'Poppins', 'Inter', system-ui, sans-serif);
 }
+
+/* Match home primary CTA — high-contrast orange */
+.header-cta {
+  background-image: linear-gradient(to right, #f97316, #ea580c, #d97706);
+  box-shadow: 0 8px 28px rgba(249, 115, 22, 0.42);
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.25s ease;
+}
+
+.header-cta:hover {
+  background-image: linear-gradient(to right, #fb923c, #f97316, #f59e0b);
+  box-shadow: 0 12px 36px rgba(249, 115, 22, 0.52);
+  transform: translateY(-1px);
+}
+
+.header-cta:active {
+  transform: translateY(0) scale(0.98);
+}

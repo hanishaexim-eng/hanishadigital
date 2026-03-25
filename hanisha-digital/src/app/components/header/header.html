@@ -20,7 +20,7 @@
       @for (link of navLinks; track link.path) {
         <a
           [routerLink]="link.path"
-          routerLinkActive="bg-slate-100 text-indigo-600 dark:bg-slate-800/90 dark:text-indigo-300"
+          routerLinkActive="bg-slate-100 text-indigo-600 dark:bg-slate-800/90 dark:text-indigo-200"
           [routerLinkActiveOptions]="link.exact ? { exact: true } : { exact: false }"
           class="rounded-xl px-3 py-2.5 text-sm font-medium text-slate-600 transition hover:bg-slate-100 hover:text-slate-900 dark:text-slate-300 dark:hover:bg-slate-800/80 dark:hover:text-white md:py-2"
           (click)="closeMenu()"
@@ -38,14 +38,14 @@
         [attr.aria-label]="theme.mode() === 'dark' ? 'Switch to light mode' : 'Switch to dark mode'"
       >
         @if (theme.mode() === 'dark') {
-          <span class="text-lg" aria-hidden="true">☀️</span>
+          <app-icon name="sun" sizeClass="h-5 w-5" [decorative]="true" />
         } @else {
-          <span class="text-lg" aria-hidden="true">🌙</span>
+          <app-icon name="moon" sizeClass="h-5 w-5" [decorative]="true" />
         }
       </button>
       <a
         routerLink="/contact"
-        class="hidden rounded-full bg-gradient-to-r from-indigo-600 via-violet-600 to-cyan-500 px-5 py-2.5 text-sm font-semibold text-white shadow-lg shadow-indigo-500/25 transition hover:shadow-indigo-500/40 sm:inline-flex"
+        class="header-cta hidden rounded-full px-5 py-2.5 text-sm font-bold text-white shadow-lg transition sm:inline-flex"
         (click)="closeMenu()"
       >
         Get Started

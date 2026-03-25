@@ -36,8 +36,17 @@
 
 .fab__btn--primary {
   color: #fff;
-  background: linear-gradient(135deg, #6366f1, #7c3aed, #0891b2);
-  box-shadow: 0 10px 40px rgba(99, 102, 241, 0.45);
+  background: linear-gradient(135deg, #f97316, #ea580c, #d97706);
+  box-shadow:
+    0 10px 40px rgba(249, 115, 22, 0.5),
+    0 0 0 1px rgba(255, 255, 255, 0.12) inset;
+}
+
+.fab__btn--primary:hover {
+  background: linear-gradient(135deg, #fb923c, #f97316, #f59e0b);
+  box-shadow:
+    0 14px 48px rgba(249, 115, 22, 0.58),
+    0 0 0 1px rgba(255, 255, 255, 0.16) inset;
 }
 
 .fab__btn--ghost {
@@ -54,10 +63,10 @@
   z-index: 1;
 }
 
-.fab__icon {
-  font-size: 1.15rem;
+.fab__btn--ghost app-icon {
   position: relative;
   z-index: 1;
+  color: #e2e8f0;
 }
 
 .fab__ripple {

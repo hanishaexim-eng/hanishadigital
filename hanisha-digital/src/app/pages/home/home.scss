@@ -1,3 +1,27 @@
+/* High-contrast primary CTA — orange/amber (white text meets WCAG AA on orange-500) */
+.cta-primary {
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.25s ease,
+    filter 0.2s ease;
+  background-image: linear-gradient(to right, #f97316, #ea580c, #d97706);
+  box-shadow:
+    0 10px 40px rgba(249, 115, 22, 0.45),
+    0 0 0 1px rgba(255, 255, 255, 0.12) inset;
+}
+
+.cta-primary:hover {
+  background-image: linear-gradient(to right, #fb923c, #f97316, #f59e0b);
+  box-shadow:
+    0 14px 48px rgba(249, 115, 22, 0.55),
+    0 0 0 1px rgba(255, 255, 255, 0.18) inset;
+  transform: translateY(-2px);
+}
+
+.cta-primary:active {
+  transform: translateY(0) scale(0.98);
+}
+
 /* Animated mesh blobs — hero background */
 .hero-blobs {
   background:

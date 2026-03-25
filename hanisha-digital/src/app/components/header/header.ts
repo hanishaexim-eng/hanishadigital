@@ -2,11 +2,12 @@ import { Component, inject } from '@angular/core';
 import { NgClass } from '@angular/common';
 import { RouterLink, RouterLinkActive } from '@angular/router';
 import { ThemeService } from '../../core/theme.service';
+import { IconComponent } from '../icon/icon.component';
 
 @Component({
   selector: 'app-header',
   standalone: true,
-  imports: [RouterLink, RouterLinkActive, NgClass],
+  imports: [RouterLink, RouterLinkActive, NgClass, IconComponent],
   templateUrl: './header.html',
   styleUrl: './header.scss',
 })

@@ -31,6 +31,10 @@
 }
 
 [data-theme='dark'] {
+  /* WCAG-friendly accent text on dark backgrounds (~4.5:1+ vs slate-950) */
+  --accent-on-dark: #c7d2fe;
+  --accent-on-dark-strong: #e0e7ff;
+
   --bg-page: #070b14;
   --bg-elevated: #0f1219;
   --bg-glass: rgba(15, 18, 25, 0.72);
