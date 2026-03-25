@@ -1,0 +1,72 @@
+.page-head h1 {
+  margin: 0 0 0.5rem;
+  font-size: clamp(2rem, 4vw, 2.75rem);
+}
+
+.lead {
+  margin: 0;
+  max-width: 720px;
+  color: var(--text-muted);
+  line-height: 1.75;
+}
+
+.blog-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  max-width: 800px;
+  margin-inline: auto;
+}
+
+.blog-post {
+  scroll-margin-top: 96px;
+
+  time {
+    font-size: 0.78rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--text-subtle);
+  }
+
+  h2 {
+    margin: 0.5rem 0 0.75rem;
+    font-size: 1.35rem;
+  }
+
+  p {
+    margin: 0;
+    color: var(--text-muted);
+    line-height: 1.75;
+  }
+}
+
+.blog-post__kw {
+  margin-top: 1rem !important;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem;
+
+  span {
+    font-size: 0.72rem;
+    padding: 0.2rem 0.5rem;
+    border-radius: 6px;
+    border: 1px solid var(--border);
+    color: var(--text-subtle);
+  }
+}
+
+.container--narrow {
+  max-width: 640px;
+}
+
+.disclaimer {
+  margin: 0;
+  font-size: 0.88rem;
+  color: var(--text-subtle);
+  text-align: center;
+}
+
+.section--muted {
+  background: rgba(99, 102, 241, 0.04);
+  border-top: 1px solid var(--border);
+}

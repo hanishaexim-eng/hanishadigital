@@ -1,0 +1,53 @@
+<section class="section page-head" appReveal>
+  <div class="container">
+    <h1>Contact</h1>
+    <p class="lead">
+      Tell us about your startup — we’ll follow up within one business day. Email:
+      <a href="mailto:hanishaexim@gmail.com">hanishaexim@gmail.com</a>
+    </p>
+  </div>
+</section>
+
+<section class="section" appReveal>
+  <div class="container contact-grid">
+    <form class="glass-card contact-form" [formGroup]="form" (ngSubmit)="onSubmit()" novalidate>
+      <label class="field">
+        <span>Name *</span>
+        <input type="text" formControlName="name" autocomplete="name" placeholder="Your name" />
+        @if (showError('name')) {
+          <span class="error">Enter at least 2 characters.</span>
+        }
+      </label>
+
+      <label class="field">
+        <span>Work email *</span>
+        <input type="email" formControlName="email" autocomplete="email" placeholder="you@company.com" />
+        @if (showError('email')) {
+          <span class="error">Enter a valid email address.</span>
+        }
+      </label>
+
+      <label class="field">
+        <span>Company / startup</span>
+        <input type="text" formControlName="company" autocomplete="organization" placeholder="Optional" />
+      </label>
+
+      <label class="field">
+        <span>Project details *</span>
+        <textarea formControlName="message" rows="6" placeholder="What are you building? Timeline? Budget range?"></textarea>
+        @if (showError('message')) {
+          <span class="error">Please share at least 15 characters.</span>
+        }
+      </label>
+
+      <button type="submit" class="btn btn--primary btn--block">Send via email</button>
+      <p class="hint">Opens your email client with this message — no backend storage in this demo.</p>
+    </form>
+
+    <aside class="glass-card contact-aside">
+      <h2>Calendly</h2>
+      <p>Prefer a live call? Add your Calendly link here when ready.</p>
+      <a class="btn btn--ghost btn--block" href="https://calendly.com/" target="_blank" rel="noopener noreferrer">Book a slot</a>
+    </aside>
+  </div>
+</section>

@@ -1,0 +1,33 @@
+<section class="section page-head" appReveal>
+  <div class="container">
+    <h1>Blog</h1>
+    <p class="lead">
+      Practical articles for founders — written for search and for clarity. Keywords: startup MVP, app development, affordable software.
+    </p>
+  </div>
+</section>
+
+<section class="section" appReveal>
+  <div class="container blog-list">
+    @for (post of posts; track post.id) {
+      <article class="glass-card blog-post" [id]="post.id">
+        <time [attr.datetime]="post.date">{{ post.date }}</time>
+        <h2>{{ post.title }}</h2>
+        <p>{{ post.excerpt }}</p>
+        <p class="blog-post__kw">
+          @for (k of post.keywords; track k) {
+            <span>{{ k }}</span>
+          }
+        </p>
+      </article>
+    }
+  </div>
+</section>
+
+<section class="section section--muted" appReveal>
+  <div class="container container--narrow">
+    <p class="disclaimer">
+      These posts are editorial outlines you can expand into full articles. Add canonical URLs and internal links when you deploy to production.
+    </p>
+  </div>
+</section>

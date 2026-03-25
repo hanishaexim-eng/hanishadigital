@@ -1,4 +1,192 @@
-<main class="shell">
-  <h1>Angular</h1>
-  <p>Starter shell — replace this page with your new site.</p>
-</main>
+<!-- Hero -->
+<section class="hero" appReveal>
+  <div class="container hero__grid">
+    <div class="hero__copy">
+      <p class="hero__eyebrow">Global IT · Startup-focused</p>
+      <h1 class="hero__title">Build Your Startup with Affordable IT Solutions</h1>
+      <p class="hero__sub">
+        We help startups launch faster with SaaS, Ecommerce, and custom software — scalable, transparent, and built for founders worldwide.
+      </p>
+      <div class="hero__cta">
+        <a routerLink="/contact" class="btn btn--primary btn--lg">Get Started</a>
+        <a routerLink="/contact" class="btn btn--ghost btn--lg">Contact Us</a>
+      </div>
+    </div>
+    <div class="hero__art" aria-hidden="true">
+      <svg class="hero__svg" viewBox="0 0 400 320" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <linearGradient id="g1" x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0%" stop-color="#6366f1" />
+            <stop offset="100%" stop-color="#22d3ee" />
+          </linearGradient>
+          <linearGradient id="g2" x1="0" y1="1" x2="1" y2="0">
+            <stop offset="0%" stop-color="#a78bfa" />
+            <stop offset="100%" stop-color="#6366f1" />
+          </linearGradient>
+        </defs>
+        <ellipse cx="200" cy="280" rx="140" ry="24" fill="url(#g1)" opacity="0.25" />
+        <path d="M200 48 L260 200 L140 200 Z" fill="url(#g1)" opacity="0.9" />
+        <circle cx="200" cy="120" r="64" fill="url(#g2)" stroke="rgba(255,255,255,0.2)" stroke-width="4" />
+        <circle cx="200" cy="120" r="28" fill="#0f172a" opacity="0.15" />
+        <path d="M80 180 Q200 100 320 180" stroke="url(#g1)" stroke-width="6" stroke-linecap="round" fill="none" opacity="0.6" />
+        <rect x="160" y="200" width="80" height="56" rx="12" fill="url(#g1)" opacity="0.85" />
+        <circle cx="200" cy="228" r="8" fill="#fff" opacity="0.9" />
+      </svg>
+    </div>
+  </div>
+</section>
+
+<!-- Value prop -->
+<section class="section value" appReveal>
+  <div class="container">
+    <p class="value__line">Affordable IT Services for Global Startups</p>
+  </div>
+</section>
+
+<!-- Features -->
+<section class="section" appReveal>
+  <div class="container">
+    <header class="block-head">
+      <h2>Why founders choose us</h2>
+      <p>Engineering that respects your runway — without cutting corners on quality.</p>
+    </header>
+    <div class="feature-grid">
+      <article class="glass-card feature-card">
+        <span class="feature-card__icon">💸</span>
+        <h3>Low Cost Development</h3>
+        <p>Packages designed for early-stage budgets — clear scope, no surprise invoices.</p>
+      </article>
+      <article class="glass-card feature-card">
+        <span class="feature-card__icon">⚡</span>
+        <h3>Fast Delivery</h3>
+        <p>MVPs in weeks, not quarters — shipped with demos and measurable milestones.</p>
+      </article>
+      <article class="glass-card feature-card">
+        <span class="feature-card__icon">🌍</span>
+        <h3>Global Service</h3>
+        <p>Remote-first teams with timezone-friendly communication for startups anywhere.</p>
+      </article>
+      <article class="glass-card feature-card">
+        <span class="feature-card__icon">📈</span>
+        <h3>Scalable Architecture</h3>
+        <p>Cloud-ready foundations that grow with your product and customer base.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- Services preview -->
+<section class="section" appReveal>
+  <div class="container">
+    <header class="block-head">
+      <h2>What we build</h2>
+      <p>End-to-end delivery across SaaS, commerce, and regulated healthcare.</p>
+    </header>
+    <div class="feature-grid feature-grid--3">
+      <a routerLink="/services" fragment="saas" class="glass-card service-card">
+        <div class="service-card__icon">☁️</div>
+        <h3>SaaS Development</h3>
+        <p>Multi-tenant apps, billing, APIs, and dashboards your users will trust.</p>
+        <span class="service-card__link">Learn more →</span>
+      </a>
+      <a routerLink="/services" fragment="ecommerce" class="glass-card service-card">
+        <div class="service-card__icon">🛒</div>
+        <h3>Ecommerce</h3>
+        <p>Stores, checkout, inventory, and integrations that convert and scale.</p>
+        <span class="service-card__link">Learn more →</span>
+      </a>
+      <a routerLink="/services" fragment="healthcare" class="glass-card service-card">
+        <div class="service-card__icon">🏥</div>
+        <h3>Healthcare &amp; Clinical</h3>
+        <p>Secure workflows, HIPAA-aware patterns, and compliance-minded engineering.</p>
+        <span class="service-card__link">Learn more →</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- Testimonials -->
+<section class="section section--muted" appReveal>
+  <div class="container">
+    <header class="block-head">
+      <h2>Founder stories</h2>
+      <p>Sample testimonials — replace with your real client quotes when you ship.</p>
+    </header>
+    <div class="feature-grid feature-grid--3">
+      <figure class="glass-card quote-card">
+        <blockquote>“We went from idea to demo in 4 weeks. Communication was clear and the stack was clean.”</blockquote>
+        <figcaption>— Alex M., SaaS founder</figcaption>
+      </figure>
+      <figure class="glass-card quote-card">
+        <blockquote>“Finally a team that understood MVP scope. No bloat — just what we needed to raise.”</blockquote>
+        <figcaption>— Priya R., Ecommerce startup</figcaption>
+      </figure>
+      <figure class="glass-card quote-card">
+        <blockquote>“Clinical workflows are complex; they delivered a usable system we could pilot with real staff.”</blockquote>
+        <figcaption>— Dr. James L., Healthtech</figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="section" appReveal>
+  <div class="container container--narrow">
+    <header class="block-head">
+      <h2>FAQ</h2>
+      <p>Quick answers for global startups evaluating a build partner.</p>
+    </header>
+    <div class="faq">
+      <details class="faq__item glass-card">
+        <summary>How fast can you ship an MVP?</summary>
+        <p>Many MVPs land in 4–8 weeks depending on scope and integrations. We align on milestones weekly.</p>
+      </details>
+      <details class="faq__item glass-card">
+        <summary>Do you work with startups outside India?</summary>
+        <p>Yes — we are built for remote delivery and async-friendly collaboration across time zones.</p>
+      </details>
+      <details class="faq__item glass-card">
+        <summary>What’s included in pricing?</summary>
+        <p>See our <a routerLink="/pricing">pricing page</a> for starter-friendly packages. Custom quotes for enterprise needs.</p>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- Blog preview -->
+<section class="section section--muted" appReveal>
+  <div class="container">
+    <header class="block-head">
+      <h2>From the blog</h2>
+      <p>SEO-friendly guides for founders — MVP, cost, and product strategy.</p>
+    </header>
+    <div class="feature-grid feature-grid--3">
+      <article class="glass-card blog-card">
+        <h3><a routerLink="/blog">How to build a startup app in 30 days</a></h3>
+        <p class="blog-card__meta">MVP · Planning · 2026</p>
+        <p>A practical roadmap from scope to launch — without burning your runway.</p>
+      </article>
+      <article class="glass-card blog-card">
+        <h3><a routerLink="/blog">Cost to build an MVP in the USA (2026)</a></h3>
+        <p class="blog-card__meta">Budget · Startups · 2026</p>
+        <p>What drives price, and how to keep your first release lean and testable.</p>
+      </article>
+      <article class="glass-card blog-card">
+        <h3><a routerLink="/blog">MVP vs full product</a></h3>
+        <p class="blog-card__meta">Product · Strategy</p>
+        <p>When to ship thin, when to invest deep — a founder’s guide.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="section cta" appReveal>
+  <div class="container">
+    <div class="cta__box glass-card">
+      <h2>Ready to build?</h2>
+      <p>Tell us about your product — we’ll reply with a scope and next steps.</p>
+      <a routerLink="/contact" class="btn btn--primary btn--lg">Start a conversation</a>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,27 @@
+<header class="header" [class.header--open]="menuOpen">
+  <div class="container header__inner">
+    <a routerLink="/" class="header__brand" (click)="closeMenu()">
+      <span class="header__logo" aria-hidden="true"></span>
+      <span class="header__name">Hanisha <span>Exim</span></span>
+    </a>
+
+    <nav class="header__nav" [attr.aria-expanded]="menuOpen">
+      <a routerLink="/" routerLinkActive="is-active" [routerLinkActiveOptions]="{ exact: true }" (click)="closeMenu()">Home</a>
+      <a routerLink="/services" routerLinkActive="is-active" (click)="closeMenu()">Services</a>
+      <a routerLink="/pricing" routerLinkActive="is-active" (click)="closeMenu()">Pricing</a>
+      <a routerLink="/about" routerLinkActive="is-active" (click)="closeMenu()">About</a>
+      <a routerLink="/blog" routerLinkActive="is-active" (click)="closeMenu()">Blog</a>
+      <a routerLink="/contact" routerLinkActive="is-active" (click)="closeMenu()">Contact</a>
+    </nav>
+
+    <div class="header__actions">
+      <button type="button" class="header__theme" (click)="toggleTheme()" [attr.aria-label]="theme.mode() === 'dark' ? 'Switch to light mode' : 'Switch to dark mode'">
+        <span class="header__theme-icon" [class.header__theme-icon--sun]="theme.mode() === 'dark'"></span>
+      </button>
+      <a routerLink="/contact" class="btn btn--primary header__cta" (click)="closeMenu()">Get Started</a>
+      <button type="button" class="header__burger" (click)="toggleMenu()" [attr.aria-label]="menuOpen ? 'Close menu' : 'Open menu'">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</header>
