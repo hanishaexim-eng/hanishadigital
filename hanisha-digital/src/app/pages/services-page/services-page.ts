@@ -15,10 +15,12 @@ export class ServicesPage implements OnInit {
 
   ngOnInit(): void {
     this.seo.apply({
-      title: 'IT Services',
+      title: 'IT Services — SaaS MVP, Web & Mobile',
       description:
-        'SaaS development, ecommerce platforms, and healthcare software for startups. Affordable, scalable delivery from Hanisha Exim.',
-      keywords: 'SaaS development, ecommerce development, healthcare software, clinical systems, startup developers',
+        'SaaS MVP development, web apps, mobile, UI/UX, and dedicated developers for US startups. Outcomes, tech stack, timelines from Hanisha Exim.',
+      keywords:
+        'SaaS development company, MVP development services, web app development, hire developers from India, startup engineering',
+      canonicalPath: '/services',
     });
   }
 }

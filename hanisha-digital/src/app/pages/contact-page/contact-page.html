@@ -1,8 +1,8 @@
 <section class="section page-head" appReveal>
   <div class="container">
-    <h1>Contact</h1>
+    <h1>Book a free consultation</h1>
     <p class="lead">
-      Tell us about your startup — we’ll follow up within one business day. Email:
+      Tell us about your US startup project — we reply within one business day. Prefer email?
       <a href="mailto:hanishaexim@gmail.com">hanishaexim@gmail.com</a>
     </p>
   </div>
@@ -30,6 +30,19 @@
       <label class="field">
         <span>Company / startup</span>
         <input type="text" formControlName="company" autocomplete="organization" placeholder="Optional" />
+      </label>
+
+      <label class="field">
+        <span>Budget range</span>
+        <select formControlName="budget">
+          <option value="">Select a range (optional)</option>
+          <option value="Under $5k">Under $5k</option>
+          <option value="$5k – $10k">$5k – $10k</option>
+          <option value="$10k – $20k">$10k – $20k</option>
+          <option value="$20k – $50k">$20k – $50k</option>
+          <option value="$50k+">$50k+</option>
+          <option value="Monthly retainer">Monthly retainer</option>
+        </select>
       </label>
 
       <label class="field">

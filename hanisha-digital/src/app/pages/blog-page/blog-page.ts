@@ -57,10 +57,11 @@ export class BlogPage implements OnInit {
 
   ngOnInit(): void {
     this.seo.apply({
-      title: 'Blog',
+      title: 'Blog — MVP & Startup Engineering',
       description:
-        'Guides for founders: MVP timelines, costs, and product strategy. Hanisha Exim — affordable IT for global startups.',
-      keywords: 'startup MVP, app development blog, MVP cost, build startup app, software development blog',
+        'Guides for US founders: MVP timelines, costs, and product strategy. SaaS development company insights from Hanisha Exim.',
+      keywords: 'MVP development services, startup MVP, SaaS development blog, MVP cost USA',
+      canonicalPath: '/blog',
     });
   }
 }

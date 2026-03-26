@@ -18,6 +18,7 @@ export class LeadModalComponent {
   readonly form = this.fb.nonNullable.group({
     name: ['', [Validators.required, Validators.minLength(2)]],
     email: ['', [Validators.required, Validators.email]],
+    budget: [''],
     message: ['', [Validators.required, Validators.minLength(15)]],
   });
 
@@ -32,8 +33,8 @@ export class LeadModalComponent {
       this.form.markAllAsTouched();
       return;
     }
-    const { name, email, message } = this.form.value;
-    const body = `Name: ${name}\nEmail: ${email}\n\n${message}`;
+    const { name, email, budget, message } = this.form.value;
+    const body = `Name: ${name}\nEmail: ${email}\nBudget: ${budget || '—'}\n\n${message}`;
     window.location.href = `mailto:hanishaexim@gmail.com?subject=${encodeURIComponent('Lead — ' + name)}&body=${encodeURIComponent(body)}`;
     this.close();
     this.form.reset();

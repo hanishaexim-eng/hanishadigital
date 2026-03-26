@@ -2,8 +2,8 @@
   <div class="lead-modal__backdrop" role="dialog" aria-modal="true" aria-labelledby="lead-title" (click)="backdropClick($event)">
     <div class="lead-modal__panel">
       <button type="button" class="lead-modal__close" (click)="close()" aria-label="Close">×</button>
-      <h2 id="lead-title" class="lead-modal__title">Get a free consult</h2>
-      <p class="lead-modal__sub">Tell us about your startup — we reply within one business day.</p>
+      <h2 id="lead-title" class="lead-modal__title">Get a quote</h2>
+      <p class="lead-modal__sub">US startup projects — we reply within one business day.</p>
       <form [formGroup]="form" (ngSubmit)="submit()" class="lead-modal__form">
         <label>
           <span>Name</span>
@@ -20,8 +20,18 @@
           }
         </label>
         <label>
-          <span>Project</span>
-          <textarea formControlName="message" rows="4" placeholder="SaaS, ecommerce, healthcare…"></textarea>
+          <span>Budget (optional)</span>
+          <select formControlName="budget">
+            <option value="">Select range</option>
+            <option value="Under $5k">Under $5k</option>
+            <option value="$5k – $20k">$5k – $20k (typical MVP)</option>
+            <option value="$20k+">$20k+</option>
+            <option value="Monthly">Monthly retainer</option>
+          </select>
+        </label>
+        <label>
+          <span>Project details</span>
+          <textarea formControlName="message" rows="4" placeholder="What are you building? Timeline? Integrations?"></textarea>
           @if (err('message')) {
             <span class="lead-modal__err">Share at least 15 characters</span>
           }

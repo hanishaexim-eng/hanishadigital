@@ -1,109 +1,138 @@
-<!-- Hero -->
-<section class="relative overflow-hidden px-4 pb-20 pt-12 sm:px-6 sm:pb-28 sm:pt-16 lg:px-8" appReveal>
+<!-- Hero — single H1, agency positioning -->
+<section class="relative overflow-hidden px-4 pb-16 pt-10 sm:px-6 sm:pb-24 sm:pt-14 lg:px-8" appReveal>
   <div class="hero-blobs pointer-events-none absolute inset-0 -z-10" aria-hidden="true"></div>
   <div class="relative mx-auto max-w-7xl">
-    <div class="mx-auto max-w-3xl text-center">
+    <div class="mx-auto max-w-4xl text-center">
       <p
-        class="mb-4 inline-flex items-center gap-2 rounded-full border border-indigo-400/25 bg-indigo-500/10 px-4 py-1.5 text-xs font-semibold uppercase tracking-wider text-indigo-800 dark:border-indigo-300/35 dark:bg-indigo-500/15 dark:text-indigo-100"
+        class="mb-4 inline-flex max-w-full flex-wrap items-center justify-center gap-x-2 gap-y-1 rounded-full border border-indigo-400/25 bg-indigo-500/10 px-4 py-2 text-xs font-semibold uppercase tracking-wider text-indigo-800 dark:border-indigo-300/35 dark:bg-indigo-500/15 dark:text-indigo-100"
       >
-        Global IT · Startup export partner
+        {{ trustBadge }}
       </p>
-      <h1 class="font-display text-4xl font-bold leading-tight tracking-tight text-slate-900 sm:text-5xl lg:text-6xl dark:text-white">
-        Affordable IT Solutions for
-        <span class="bg-gradient-to-r from-indigo-600 via-violet-500 to-cyan-500 bg-clip-text text-transparent dark:from-indigo-300 dark:via-violet-300 dark:to-cyan-300"
-          >Global Startups</span
-        >
+      <h1 class="font-display text-3xl font-bold leading-[1.15] tracking-tight text-slate-900 sm:text-4xl lg:text-5xl dark:text-white">
+        We build scalable SaaS &amp; web apps for US startups — faster &amp; cost-effective
       </h1>
-      <p class="mx-auto mt-6 max-w-2xl text-lg text-slate-600 dark:text-slate-300">
-        We help startups build SaaS, Ecommerce, and Healthcare platforms at low cost — with fast MVPs, transparent scope, and architecture that scales.
+      <p class="mx-auto mt-6 max-w-3xl text-lg leading-relaxed text-slate-600 sm:text-xl dark:text-slate-300">
+        From MVP to full-scale products, we help startups launch in weeks, not months. Product-grade engineering, transparent scope, and a team aligned to US-style milestones.
       </p>
+      <p class="mx-auto mt-4 max-w-2xl text-sm font-medium text-orange-700 dark:text-amber-300">{{ urgency }}</p>
       <div class="mt-10 flex flex-wrap items-center justify-center gap-4">
         <a
           routerLink="/contact"
-          class="cta-primary inline-flex min-h-[48px] min-w-[180px] items-center justify-center rounded-full px-8 py-3.5 text-sm font-bold text-white shadow-xl transition focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-orange-300"
+          class="cta-primary inline-flex min-h-[48px] min-w-[200px] items-center justify-center rounded-full px-8 py-3.5 text-sm font-bold text-white shadow-xl transition focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-orange-300"
         >
-          Get Started
+          Book Free Consultation
         </a>
         <button
           type="button"
           (click)="lead.show()"
-          class="inline-flex min-h-[48px] min-w-[180px] items-center justify-center rounded-full border-2 border-slate-300/90 bg-white/90 px-8 py-3.5 text-sm font-semibold text-slate-900 shadow-sm backdrop-blur transition hover:border-orange-400/80 hover:bg-white hover:shadow-md dark:border-slate-500 dark:bg-slate-900/90 dark:text-white dark:hover:border-orange-400/70"
+          class="inline-flex min-h-[48px] min-w-[200px] items-center justify-center rounded-full border-2 border-slate-300/90 bg-white/90 px-8 py-3.5 text-sm font-bold text-slate-900 shadow-sm backdrop-blur transition hover:border-orange-400/80 hover:bg-white hover:shadow-md dark:border-slate-500 dark:bg-slate-900/90 dark:text-white dark:hover:border-orange-400/70"
         >
-          Book Consultation
+          Get Quote
         </button>
       </div>
     </div>
   </div>
 </section>
 
-<!-- Services -->
-<section id="services" class="scroll-mt-24 px-4 py-16 sm:px-6 lg:px-8" appReveal>
-  <div class="mx-auto max-w-7xl">
-    <div class="mx-auto max-w-2xl text-center">
-      <h2 class="font-display text-3xl font-bold tracking-tight text-slate-900 dark:text-white sm:text-4xl">Services</h2>
-      <p class="mt-3 text-lg text-slate-600 dark:text-slate-300">Product-grade delivery across your core verticals.</p>
-    </div>
-    <div class="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-      <a
-        routerLink="/services"
-        fragment="saas"
-        class="group relative overflow-hidden rounded-2xl border border-slate-200/80 bg-white/60 p-8 shadow-xl shadow-slate-900/5 backdrop-blur-xl transition duration-300 hover:-translate-y-1 hover:scale-[1.02] hover:border-indigo-500/40 hover:shadow-indigo-500/10 dark:border-slate-700/80 dark:bg-slate-900/50 dark:shadow-black/40"
-      >
-        <div class="mb-4 text-indigo-600 dark:text-indigo-200">
-          <app-icon name="cloud" sizeClass="h-8 w-8" />
-        </div>
-        <h3 class="font-display text-xl font-semibold text-slate-900 dark:text-white">SaaS Development</h3>
-        <p class="mt-2 text-slate-600 dark:text-slate-300">Multi-tenant apps, billing, APIs, and admin dashboards.</p>
-        <span
-          class="mt-4 inline-block text-sm font-semibold text-indigo-700 group-hover:translate-x-1 dark:text-indigo-200"
-          >Explore →</span
-        >
-      </a>
-      <a
-        routerLink="/services"
-        fragment="ecommerce"
-        class="group relative overflow-hidden rounded-2xl border border-slate-200/80 bg-white/60 p-8 shadow-xl shadow-slate-900/5 backdrop-blur-xl transition duration-300 hover:-translate-y-1 hover:scale-[1.02] hover:border-violet-500/40 hover:shadow-violet-500/10 dark:border-slate-700/80 dark:bg-slate-900/50 dark:shadow-black/40"
-      >
-        <div class="mb-4 text-violet-600 dark:text-violet-200">
-          <app-icon name="cart" sizeClass="h-8 w-8" />
-        </div>
-        <h3 class="font-display text-xl font-semibold text-slate-900 dark:text-white">Ecommerce Development</h3>
-        <p class="mt-2 text-slate-600 dark:text-slate-300">Stores, checkout, catalog, and integrations that convert.</p>
-        <span
-          class="mt-4 inline-block text-sm font-semibold text-violet-700 group-hover:translate-x-1 dark:text-violet-200"
-          >Explore →</span
-        >
-      </a>
-      <a
-        routerLink="/services"
-        fragment="healthcare"
-        class="group relative overflow-hidden rounded-2xl border border-slate-200/80 bg-white/60 p-8 shadow-xl shadow-slate-900/5 backdrop-blur-xl transition duration-300 hover:-translate-y-1 hover:scale-[1.02] hover:border-cyan-500/40 hover:shadow-cyan-500/10 dark:border-slate-700/80 dark:bg-slate-900/50 dark:shadow-black/40 sm:col-span-2 lg:col-span-1"
-      >
-        <div class="mb-4 text-cyan-600 dark:text-cyan-200">
-          <app-icon name="beaker" sizeClass="h-8 w-8" />
-        </div>
-        <h3 class="font-display text-xl font-semibold text-slate-900 dark:text-white">Healthcare / Clinical Software</h3>
-        <p class="mt-2 text-slate-600 dark:text-slate-300">Secure workflows and compliance-minded engineering.</p>
-        <span
-          class="mt-4 inline-block text-sm font-semibold text-cyan-700 group-hover:translate-x-1 dark:text-cyan-200"
-          >Explore →</span
-        >
-      </a>
+<!-- Mid-page CTA #1 -->
+<section class="border-y border-slate-200/80 bg-slate-50/80 px-4 py-8 dark:border-slate-800/80 dark:bg-slate-900/40 sm:px-6 lg:px-8" appReveal>
+  <div class="mx-auto flex max-w-5xl flex-col items-center justify-between gap-4 text-center sm:flex-row sm:text-left">
+    <p class="text-base font-semibold text-slate-800 dark:text-slate-100">Ready to launch your MVP? Start your project with a free discovery call.</p>
+    <div class="flex shrink-0 flex-wrap justify-center gap-3">
+      <a routerLink="/contact" class="cta-primary inline-flex rounded-full px-6 py-3 text-sm font-bold text-white">Start your project</a>
+      <button type="button" (click)="lead.show()" class="rounded-full border border-slate-300 px-6 py-3 text-sm font-semibold text-slate-800 dark:border-slate-600 dark:text-white">Launch your MVP</button>
     </div>
   </div>
 </section>
 
-<!-- Why us -->
-<section class="border-y border-slate-200/80 bg-gradient-to-b from-slate-50/90 to-white px-4 py-16 dark:border-slate-800/80 dark:from-slate-950/90 dark:to-slate-900/80 sm:px-6 lg:px-8" appReveal>
+<!-- Services — H2 -->
+<section id="services" class="scroll-mt-24 px-4 py-16 sm:px-6 lg:px-8 lg:py-20" appReveal>
+  <div class="mx-auto max-w-7xl">
+    <div class="mx-auto max-w-3xl text-center">
+      <h2 class="font-display text-3xl font-bold tracking-tight text-slate-900 dark:text-white sm:text-4xl">What we deliver</h2>
+      <p class="mt-3 text-lg text-slate-600 dark:text-slate-300">
+        End-to-end <strong class="font-semibold text-slate-800 dark:text-white">SaaS development</strong>, web &amp; mobile, design, and dedicated engineers — structured for US startups.
+      </p>
+    </div>
+    <div class="mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+      @for (s of serviceOfferings; track s.title) {
+        <article
+          class="flex flex-col rounded-2xl border border-slate-200/80 bg-white/70 p-7 shadow-lg shadow-slate-900/5 backdrop-blur-md transition hover:-translate-y-0.5 hover:shadow-xl dark:border-slate-700/80 dark:bg-slate-900/55 dark:shadow-black/30"
+        >
+          <div class="mb-3" [class]="s.accent">
+            <app-icon [name]="s.icon" sizeClass="h-8 w-8" />
+          </div>
+          <h3 class="font-display text-lg font-semibold text-slate-900 dark:text-white">{{ s.title }}</h3>
+          <p class="mt-2 flex-1 text-sm leading-relaxed text-slate-600 dark:text-slate-300">{{ s.outcome }}</p>
+          <dl class="mt-4 space-y-2 border-t border-slate-200/80 pt-4 text-xs dark:border-slate-700/80">
+            <div>
+              <dt class="font-semibold uppercase tracking-wide text-slate-500 dark:text-slate-400">Tech stack</dt>
+              <dd class="mt-0.5 text-slate-700 dark:text-slate-200">{{ s.tech }}</dd>
+            </div>
+            <div>
+              <dt class="font-semibold uppercase tracking-wide text-slate-500 dark:text-slate-400">Timeline</dt>
+              <dd class="mt-0.5 text-slate-700 dark:text-slate-200">{{ s.timeline }}</dd>
+            </div>
+          </dl>
+          <a
+            routerLink="/contact"
+            class="mt-5 inline-flex text-sm font-semibold text-indigo-700 hover:underline dark:text-indigo-200"
+            >Discuss this →</a
+          >
+        </article>
+      }
+    </div>
+  </div>
+</section>
+
+<!-- Process — H2 -->
+<section class="border-y border-slate-200/80 bg-gradient-to-b from-white to-slate-50/90 px-4 py-16 dark:border-slate-800/80 dark:from-slate-950 dark:to-slate-900/90 sm:px-6 lg:px-8 lg:py-20" appReveal>
   <div class="mx-auto max-w-7xl">
     <div class="mx-auto max-w-2xl text-center">
-      <h2 class="font-display text-3xl font-bold tracking-tight text-slate-900 dark:text-white sm:text-4xl">Why choose Hanisha Exim</h2>
-      <p class="mt-3 text-lg text-slate-600 dark:text-slate-300">Built for founders who need speed without sacrificing quality.</p>
+      <h2 class="font-display text-3xl font-bold tracking-tight text-slate-900 dark:text-white sm:text-4xl">How we work</h2>
+      <p class="mt-3 text-lg text-slate-600 dark:text-slate-300">A clear 5-step process — so you always know what happens next.</p>
+    </div>
+    <ol class="mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-5">
+      @for (p of processSteps; track p.step) {
+        <li
+          class="relative rounded-2xl border border-slate-200/80 bg-white/80 p-5 shadow-md dark:border-slate-700/80 dark:bg-slate-900/60"
+        >
+          <span
+            class="mb-3 flex h-9 w-9 items-center justify-center rounded-full bg-gradient-to-br from-indigo-600 to-violet-600 text-sm font-bold text-white"
+            >{{ p.step }}</span
+          >
+          <h3 class="font-display text-base font-semibold text-slate-900 dark:text-white">{{ p.title }}</h3>
+          <p class="mt-2 text-sm leading-relaxed text-slate-600 dark:text-slate-300">{{ p.desc }}</p>
+        </li>
+      }
+    </ol>
+  </div>
+</section>
+
+<!-- Mid-page CTA #2 -->
+<section class="px-4 py-10 sm:px-6 lg:px-8" appReveal>
+  <div
+    class="mx-auto max-w-5xl rounded-2xl border border-orange-500/25 bg-gradient-to-r from-orange-500/10 via-amber-500/5 to-transparent px-6 py-8 text-center dark:from-orange-500/15 dark:via-amber-500/10 sm:px-10"
+  >
+    <p class="text-lg font-semibold text-slate-900 dark:text-white">See pricing &amp; engagement options — or get a quote in one business day.</p>
+    <div class="mt-5 flex flex-wrap justify-center gap-3">
+      <a routerLink="/pricing" class="cta-primary inline-flex rounded-full px-6 py-3 text-sm font-bold text-white">View pricing</a>
+      <a routerLink="/contact" class="inline-flex rounded-full border-2 border-slate-300 px-6 py-3 text-sm font-semibold text-slate-900 dark:border-slate-500 dark:text-white">Book Free Consultation</a>
+    </div>
+  </div>
+</section>
+
+<!-- Why us — H2 -->
+<section class="border-y border-slate-200/80 bg-gradient-to-b from-slate-50/90 to-white px-4 py-16 dark:border-slate-800/80 dark:from-slate-950/90 dark:to-slate-900/80 sm:px-6 lg:px-8 lg:py-20" appReveal>
+  <div class="mx-auto max-w-7xl">
+    <div class="mx-auto max-w-2xl text-center">
+      <h2 class="font-display text-3xl font-bold tracking-tight text-slate-900 dark:text-white sm:text-4xl">Why US startups choose us</h2>
+      <p class="mt-3 text-lg text-slate-600 dark:text-slate-300">Agency-grade delivery without agency bloat — built for founders who need speed and clarity.</p>
     </div>
     <div class="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
       @for (item of whyUs; track item.t) {
         <article
-          class="rounded-2xl border border-slate-200/80 bg-white/70 p-6 shadow-lg shadow-slate-900/5 backdrop-blur-md transition hover:-translate-y-0.5 hover:shadow-xl dark:border-slate-700/80 dark:bg-slate-900/60 dark:shadow-black/30"
+          class="rounded-2xl border border-slate-200/80 bg-white/70 p-6 shadow-lg shadow-slate-900/5 backdrop-blur-md dark:border-slate-700/80 dark:bg-slate-900/60"
         >
           <div class="text-indigo-600 dark:text-indigo-200">
             <app-icon [name]="item.icon" sizeClass="h-7 w-7" />
@@ -116,11 +145,23 @@
   </div>
 </section>
 
-<!-- Tech stack — text-only badges for fast LCP (no heavy logo images) -->
-<section class="px-4 py-12 sm:px-6 lg:px-8" appReveal>
+<!-- Trust: logos + tech -->
+<section class="px-4 py-14 sm:px-6 lg:px-8" appReveal>
   <div class="mx-auto max-w-7xl">
-    <p class="text-center text-xs font-bold uppercase tracking-widest text-slate-500 dark:text-slate-400">Tools & stack we ship with</p>
-    <div class="mt-6 flex flex-wrap items-center justify-center gap-2 sm:gap-3">
+    <h2 class="text-center font-display text-xl font-bold text-slate-900 dark:text-white sm:text-2xl">Trusted by teams shipping real products</h2>
+    <p class="mx-auto mt-2 max-w-2xl text-center text-sm text-slate-500 dark:text-slate-400">
+      Placeholder names — swap for client logos (WebP/SVG) when you have approval.
+    </p>
+    <div class="mt-8 flex flex-wrap items-center justify-center gap-3">
+      @for (c of clientLogos; track c) {
+        <span
+          class="rounded-xl border border-dashed border-slate-300/90 bg-slate-100/80 px-5 py-3 text-sm font-semibold text-slate-600 dark:border-slate-600 dark:bg-slate-800/60 dark:text-slate-300"
+          >{{ c }}</span
+        >
+      }
+    </div>
+    <p class="mt-12 text-center text-xs font-bold uppercase tracking-widest text-slate-500 dark:text-slate-400">Stack we ship with</p>
+    <div class="mt-4 flex flex-wrap items-center justify-center gap-2 sm:gap-3">
       @for (t of techStack; track t) {
         <span
           class="rounded-lg border border-slate-200/90 bg-white/80 px-3 py-1.5 text-xs font-medium text-slate-700 shadow-sm dark:border-slate-600 dark:bg-slate-900/70 dark:text-slate-200"
@@ -128,77 +169,74 @@
         >
       }
     </div>
-    <p class="mx-auto mt-4 max-w-2xl text-center text-sm text-slate-500 dark:text-slate-400">
-      Representative of typical engagements — we align the stack to your product and team.
-    </p>
   </div>
 </section>
 
-<!-- Pricing snapshot -->
-<section class="px-4 py-16 sm:px-6 lg:px-8" appReveal>
+<!-- Pricing / engagement — H2 -->
+<section class="px-4 py-16 sm:px-6 lg:px-8 lg:py-20" appReveal>
   <div class="mx-auto max-w-7xl">
     <div class="mx-auto max-w-2xl text-center">
-      <h2 class="font-display text-3xl font-bold tracking-tight text-slate-900 dark:text-white sm:text-4xl">Pricing</h2>
-      <p class="mt-3 text-lg text-slate-600 dark:text-slate-300">Affordable tiers — from first MVP to scale.</p>
+      <h2 class="font-display text-3xl font-bold tracking-tight text-slate-900 dark:text-white sm:text-4xl">Pricing &amp; engagement models</h2>
+      <p class="mt-3 text-lg text-slate-600 dark:text-slate-300">Fixed projects, MVP packages, or monthly engineers — pick what matches your stage.</p>
     </div>
     <div class="mt-12 grid gap-6 lg:grid-cols-3">
-      <article class="rounded-2xl border border-slate-200/80 bg-white/70 p-8 backdrop-blur dark:border-slate-700/80 dark:bg-slate-900/50">
-        <h3 class="font-display text-lg font-semibold text-slate-900 dark:text-white">Startup Plan</h3>
-        <p class="mt-2 text-3xl font-bold text-indigo-700 dark:text-indigo-200">From $3k–$6k</p>
-        <p class="mt-3 text-sm text-slate-600 dark:text-slate-300">Core MVP, limited integrations, staging handover.</p>
-      </article>
-      <article
-        class="relative rounded-2xl border-2 border-indigo-500/50 bg-gradient-to-b from-indigo-500/10 to-violet-500/5 p-8 shadow-xl shadow-indigo-500/15 backdrop-blur dark:from-indigo-500/20 dark:to-violet-500/10"
-      >
-        <span
-          class="absolute -top-3 left-1/2 -translate-x-1/2 rounded-full bg-gradient-to-r from-orange-500 to-amber-500 px-3 py-1 text-xs font-bold uppercase tracking-wide text-white shadow-md"
-          >Best value</span
+      @for (pm of pricingModels; track pm.name) {
+        <article
+          class="relative rounded-2xl border p-8 backdrop-blur"
+          [class.border-indigo-500/50]="pm.highlight"
+          [class.border-2]="pm.highlight"
+          [class.border-slate-200/80]="!pm.highlight"
+          [class.bg-gradient-to-b]="pm.highlight"
+          [class.from-indigo-500/10]="pm.highlight"
+          [class.to-violet-500/5]="pm.highlight"
+          [class.dark:from-indigo-500/20]="pm.highlight"
+          [class.dark:to-violet-500/10]="pm.highlight"
+          [class.bg-white/70]="!pm.highlight"
+          [class.dark:bg-slate-900/50]="!pm.highlight"
+          [class.dark:border-slate-700/80]="!pm.highlight"
         >
-        <h3 class="font-display text-lg font-semibold text-slate-900 dark:text-white">Growth Plan</h3>
-        <p class="mt-2 text-3xl font-bold text-indigo-700 dark:text-indigo-200">From $8k–$15k</p>
-        <p class="mt-3 text-sm text-slate-600 dark:text-slate-300">Full MVP, analytics, multiple integrations, post-launch fixes.</p>
-      </article>
-      <article class="rounded-2xl border border-slate-200/80 bg-white/70 p-8 backdrop-blur dark:border-slate-700/80 dark:bg-slate-900/50">
-        <h3 class="font-display text-lg font-semibold text-slate-900 dark:text-white">Enterprise Plan</h3>
-        <p class="mt-2 text-3xl font-bold text-slate-900 dark:text-white">Custom</p>
-        <p class="mt-3 text-sm text-slate-600 dark:text-slate-300">Dedicated squad, SLA, security reviews, roadmap.</p>
-      </article>
+          @if (pm.badge) {
+            <span
+              class="absolute -top-3 left-1/2 -translate-x-1/2 rounded-full bg-gradient-to-r from-orange-500 to-amber-500 px-3 py-1 text-xs font-bold uppercase tracking-wide text-white shadow-md"
+              >{{ pm.badge }}</span
+            >
+          }
+          <h3 class="font-display text-lg font-semibold text-slate-900 dark:text-white">{{ pm.name }}</h3>
+          <p class="mt-2 text-2xl font-bold text-indigo-700 dark:text-indigo-200">{{ pm.price }}</p>
+          <p class="mt-3 text-sm text-slate-600 dark:text-slate-300">{{ pm.desc }}</p>
+        </article>
+      }
     </div>
-    <p class="mt-8 text-center">
-      <a
-        routerLink="/pricing"
-        class="text-sm font-semibold text-indigo-700 underline-offset-4 hover:underline dark:text-indigo-200"
-        >View full pricing →</a
-      >
+    <p class="mt-10 text-center">
+      <a routerLink="/pricing" class="text-sm font-semibold text-indigo-700 underline-offset-4 hover:underline dark:text-indigo-200">Full pricing details →</a>
     </p>
   </div>
 </section>
 
-<!-- Case studies -->
-<section class="border-y border-slate-200/80 bg-slate-50/50 px-4 py-16 dark:border-slate-800/80 dark:bg-slate-950/50 sm:px-6 lg:px-8" appReveal>
+<!-- Case studies — H2 -->
+<section class="border-y border-slate-200/80 bg-slate-50/50 px-4 py-16 dark:border-slate-800/80 dark:bg-slate-950/50 sm:px-6 lg:px-8 lg:py-20" appReveal>
   <div class="mx-auto max-w-7xl">
     <div class="mx-auto max-w-2xl text-center">
       <h2 class="font-display text-3xl font-bold tracking-tight text-slate-900 dark:text-white sm:text-4xl">Case studies</h2>
-      <p class="mt-3 text-lg text-slate-600 dark:text-slate-300">Before → after snapshots — representative outcomes you can discuss on a call.</p>
+      <p class="mt-3 text-lg text-slate-600 dark:text-slate-300">Problem, solution, tech, and measurable results.</p>
     </div>
-    <div class="mt-12 grid gap-6 md:grid-cols-3">
+    <div class="mt-12 grid gap-6 lg:grid-cols-3">
       @for (cs of caseStudies; track cs.title) {
         <article
-          class="group flex flex-col rounded-2xl border border-slate-200/80 bg-white/80 p-6 shadow-lg transition hover:-translate-y-1 hover:shadow-2xl dark:border-slate-700/80 dark:bg-slate-900/60"
+          class="flex flex-col rounded-2xl border border-slate-200/80 bg-white/80 p-6 shadow-lg dark:border-slate-700/80 dark:bg-slate-900/60"
         >
           <p class="text-xs font-bold uppercase tracking-widest" [class]="cs.tagClass">{{ cs.tag }}</p>
           <h3 class="mt-2 font-display text-lg font-semibold text-slate-900 dark:text-white">{{ cs.title }}</h3>
-          <p class="mt-3 text-sm leading-relaxed text-slate-600 dark:text-slate-300">{{ cs.problem }}</p>
+          <p class="mt-3 text-sm text-slate-600 dark:text-slate-300">{{ cs.problem }}</p>
           <div class="mt-4 space-y-2 rounded-xl border border-slate-200/80 bg-slate-50/80 p-3 text-sm dark:border-slate-700/80 dark:bg-slate-950/50">
-            <p>
-              <span class="font-semibold text-slate-500 dark:text-slate-400">Before:</span>
-              {{ cs.before }}
-            </p>
-            <p>
-              <span class="font-semibold text-emerald-700 dark:text-emerald-300">After:</span>
-              {{ cs.after }}
-            </p>
+            <p><span class="font-semibold text-slate-500 dark:text-slate-400">Before:</span> {{ cs.before }}</p>
+            <p><span class="font-semibold text-emerald-700 dark:text-emerald-300">Solution:</span> {{ cs.after }}</p>
           </div>
+          <p class="mt-3 text-xs font-semibold uppercase tracking-wide text-slate-500 dark:text-slate-400">Tech used</p>
+          <p class="text-sm text-slate-700 dark:text-slate-200">{{ cs.techUsed }}</p>
+          <p class="mt-3 rounded-lg border border-emerald-500/20 bg-emerald-500/5 p-3 text-sm font-medium text-emerald-900 dark:border-emerald-500/30 dark:bg-emerald-500/10 dark:text-emerald-200">
+            <span class="font-bold">Result:</span> {{ cs.result }}
+          </p>
           <dl class="mt-4 space-y-2 border-t border-slate-200/80 pt-4 text-sm dark:border-slate-700/80">
             @for (m of cs.metrics; track m.label) {
               <div class="flex justify-between gap-2">
@@ -211,21 +249,19 @@
       }
     </div>
     <p class="mx-auto mt-8 max-w-2xl text-center text-xs text-slate-500 dark:text-slate-500">
-      Portfolio screenshots: when you add images, use WebP, set width and height, and use <code class="rounded bg-slate-200 px-1 dark:bg-slate-800">loading="lazy"</code> below the fold for better LCP.
+      Images: use WebP, width/height, and <code class="rounded bg-slate-200 px-1 dark:bg-slate-800">loading="lazy"</code> below the fold for LCP.
     </p>
   </div>
 </section>
 
-<!-- Testimonials -->
-<section class="px-4 py-16 sm:px-6 lg:px-8" appReveal>
+<!-- Testimonials — H2 -->
+<section class="px-4 py-16 sm:px-6 lg:px-8 lg:py-20" appReveal>
   <div class="mx-auto max-w-7xl">
     <h2 class="text-center font-display text-3xl font-bold text-slate-900 dark:text-white sm:text-4xl">What founders say</h2>
-    <p class="mx-auto mt-2 max-w-xl text-center text-sm text-slate-500 dark:text-slate-400">Social proof from recent-style engagements — replace with your signed quotes.</p>
+    <p class="mx-auto mt-2 max-w-xl text-center text-sm text-slate-500 dark:text-slate-400">Sample testimonials — replace with your signed quotes and logos.</p>
     <div class="mt-12 grid gap-6 md:grid-cols-3">
       @for (q of testimonials; track q.author) {
-        <figure
-          class="rounded-2xl border border-slate-200/80 bg-white/70 p-6 backdrop-blur dark:border-slate-700/80 dark:bg-slate-900/50"
-        >
+        <figure class="rounded-2xl border border-slate-200/80 bg-white/70 p-6 backdrop-blur dark:border-slate-700/80 dark:bg-slate-900/50">
           <div class="flex gap-0.5 text-orange-500 dark:text-amber-400" role="img" [attr.aria-label]="q.rating + ' out of 5 stars'">
             @for (slot of starSlots; track slot) {
               @if (slot < q.rating) {
@@ -241,34 +277,28 @@
   </div>
 </section>
 
-<!-- CTA -->
+<!-- Final CTA -->
 <section class="px-4 py-16 sm:px-6 lg:px-8" appReveal>
   <div
     class="mx-auto max-w-4xl rounded-3xl border border-indigo-500/25 bg-gradient-to-br from-indigo-600/95 via-violet-700/90 to-slate-900/95 p-10 text-center shadow-2xl shadow-indigo-900/30 backdrop-blur-xl dark:from-indigo-950/95 dark:via-violet-950/90 dark:to-slate-950/95"
   >
-    <h2 class="font-display text-2xl font-bold text-white sm:text-3xl">Start Your Startup Today</h2>
+    <h2 class="font-display text-2xl font-bold text-white sm:text-3xl">Start your project this month</h2>
     <p class="mt-3 text-indigo-50">
       Email
-      <a
-        href="mailto:hanishaexim@gmail.com"
-        class="font-semibold text-white underline decoration-white/50 underline-offset-4 transition hover:decoration-white"
-        >hanishaexim@gmail.com</a
-      >
-      — we respond within one business day.
+      <a href="mailto:hanishaexim@gmail.com" class="font-semibold text-white underline decoration-white/50 underline-offset-4 hover:decoration-white">hanishaexim@gmail.com</a>
+      — or book a call. We respond within one business day.
     </p>
     <div class="mt-8 flex flex-wrap justify-center gap-4">
+      <a routerLink="/contact" class="cta-primary inline-flex min-h-[48px] min-w-[180px] items-center justify-center rounded-full px-8 py-3.5 text-sm font-bold text-white shadow-lg"
+        >Get a quote</a
+      >
       <a
-        routerLink="/contact"
-        class="cta-primary inline-flex min-h-[48px] min-w-[160px] items-center justify-center rounded-full px-8 py-3.5 text-sm font-bold text-white shadow-lg"
-        >Contact us</a
+        href="https://calendly.com/"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="inline-flex min-h-[48px] min-w-[180px] items-center justify-center rounded-full border-2 border-white/50 bg-white/10 px-8 py-3.5 text-sm font-semibold text-white backdrop-blur transition hover:border-white hover:bg-white/20"
+        >Book on Calendly</a
       >
-      <button
-        type="button"
-        (click)="lead.show()"
-        class="inline-flex min-h-[48px] min-w-[160px] items-center justify-center rounded-full border-2 border-white/50 bg-white/10 px-8 py-3.5 text-sm font-semibold text-white backdrop-blur transition hover:border-white hover:bg-white/20 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
-      >
-        Quick lead form
-      </button>
     </div>
   </div>
 </section>
@@ -278,8 +308,8 @@
   <div class="mx-auto max-w-7xl">
     <div class="flex flex-col items-start justify-between gap-4 sm:flex-row sm:items-end">
       <div>
-        <h2 class="font-display text-3xl font-bold text-slate-900 dark:text-white">Blog</h2>
-        <p class="mt-2 text-slate-600 dark:text-slate-300">SEO-ready guides for founders.</p>
+        <h2 class="font-display text-3xl font-bold text-slate-900 dark:text-white">Insights for founders</h2>
+        <p class="mt-2 text-slate-600 dark:text-slate-300">SEO-friendly guides on MVPs, cost, and shipping.</p>
       </div>
       <a routerLink="/blog" class="text-sm font-semibold text-indigo-700 hover:underline dark:text-indigo-200">View all →</a>
     </div>
@@ -312,18 +342,17 @@
     <h2 class="text-center font-display text-2xl font-bold text-slate-900 dark:text-white">FAQ</h2>
     <div class="mt-8 space-y-3">
       <details class="group rounded-2xl border border-slate-200/80 bg-white/70 p-4 backdrop-blur dark:border-slate-700/80 dark:bg-slate-900/50">
-        <summary class="cursor-pointer font-semibold text-slate-900 dark:text-white">Do you work with startups outside India?</summary>
-        <p class="mt-2 text-sm text-slate-600 dark:text-slate-300">Yes — we’re built for remote delivery and async collaboration worldwide.</p>
+        <summary class="cursor-pointer font-semibold text-slate-900 dark:text-white">Do you work with US startups?</summary>
+        <p class="mt-2 text-sm text-slate-600 dark:text-slate-300">Yes — we’re built for remote delivery, async collaboration, and overlapping hours for calls.</p>
       </details>
       <details class="group rounded-2xl border border-slate-200/80 bg-white/70 p-4 backdrop-blur dark:border-slate-700/80 dark:bg-slate-900/50">
         <summary class="cursor-pointer font-semibold text-slate-900 dark:text-white">How fast is an MVP?</summary>
-        <p class="mt-2 text-sm text-slate-600 dark:text-slate-300">Many MVPs ship in 4–8 weeks depending on scope; we align weekly milestones.</p>
+        <p class="mt-2 text-sm text-slate-600 dark:text-slate-300">Many MVPs ship in 4–10 weeks depending on scope; we align weekly milestones.</p>
       </details>
       <details class="group rounded-2xl border border-slate-200/80 bg-white/70 p-4 backdrop-blur dark:border-slate-700/80 dark:bg-slate-900/50">
-        <summary class="cursor-pointer font-semibold text-slate-900 dark:text-white">How do I keep the site fast on Vercel (LCP)?</summary>
+        <summary class="cursor-pointer font-semibold text-slate-900 dark:text-white">How do we keep the site fast (LCP under 2.5s)?</summary>
         <p class="mt-2 text-sm text-slate-600 dark:text-slate-300">
-          Prefer WebP/AVIF for images, always set width and height to avoid layout shift, lazy-load images below the fold, and keep the hero
-          lightweight (text and CSS-first visuals load faster than large bitmaps).
+          Use WebP/AVIF, set dimensions on images, lazy-load below the fold, minimize JS, and serve from an edge CDN (e.g. Vercel). This marketing site uses CSS-first hero and text badges to avoid heavy LCP images.
         </p>
       </details>
     </div>

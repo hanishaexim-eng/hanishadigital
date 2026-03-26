@@ -16,8 +16,9 @@ export class AboutPage implements OnInit {
     this.seo.apply({
       title: 'About Us',
       description:
-        'Hanisha Exim is a global IT export partner for startups — affordable SaaS, ecommerce, and healthcare software with scalable delivery.',
-      keywords: 'Hanisha Exim, IT export company, startup software partner, offshore development',
+        'Hanisha Exim — India-based engineering partner for US startups. SaaS MVP, web apps, and dedicated teams with transparent scope.',
+      keywords: 'Hanisha Exim, offshore development India, US startup software partner, SaaS agency',
+      canonicalPath: '/about',
     });
   }
 }

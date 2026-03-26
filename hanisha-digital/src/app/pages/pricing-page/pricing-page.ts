@@ -15,10 +15,11 @@ export class PricingPage implements OnInit {
 
   ngOnInit(): void {
     this.seo.apply({
-      title: 'Pricing',
+      title: 'Pricing & Engagement Models',
       description:
-        'Startup-friendly packages for SaaS, ecommerce, and healthcare builds. Transparent tiers from Hanisha Exim.',
-      keywords: 'MVP pricing, startup development cost, affordable software development, SaaS build cost',
+        'Fixed-price projects, MVP packages ($5k–$20k range), and monthly developer hiring for US startups. Transparent pricing from Hanisha Exim.',
+      keywords: 'MVP pricing, startup development cost, hire developers India monthly, SaaS MVP cost',
+      canonicalPath: '/pricing',
     });
   }
 }

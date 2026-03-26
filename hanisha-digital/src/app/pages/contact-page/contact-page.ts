@@ -20,15 +20,17 @@ export class ContactPage implements OnInit {
     name: ['', [Validators.required, Validators.minLength(2)]],
     email: ['', [Validators.required, Validators.email]],
     company: [''],
+    budget: [''],
     message: ['', [Validators.required, Validators.minLength(15)]],
   });
 
   ngOnInit(): void {
     this.seo.apply({
-      title: 'Contact',
+      title: 'Contact — Book a Free Consultation',
       description:
-        'Contact Hanisha Exim for startup IT projects — SaaS, ecommerce, and healthcare software. Email hanishaexim@gmail.com',
-      keywords: 'contact Hanisha Exim, startup development inquiry, MVP quote',
+        'Contact Hanisha Exim for SaaS MVP and web app projects. Hire developers from India. Free consultation, quote within one business day. hanishaexim@gmail.com',
+      keywords: 'contact SaaS development company, MVP quote, hire developers from India, startup project inquiry',
+      canonicalPath: '/contact',
     });
   }
 
@@ -39,7 +41,7 @@ export class ContactPage implements OnInit {
       return;
     }
     const mailto = `mailto:hanishaexim@gmail.com?subject=${encodeURIComponent('Project inquiry from ' + this.form.value.name)}&body=${encodeURIComponent(
-      `Name: ${this.form.value.name}\nEmail: ${this.form.value.email}\nCompany: ${this.form.value.company || '—'}\n\n${this.form.value.message}`,
+      `Name: ${this.form.value.name}\nEmail: ${this.form.value.email}\nCompany: ${this.form.value.company || '—'}\nBudget: ${this.form.value.budget || '—'}\n\n${this.form.value.message}`,
     )}`;
     window.location.href = mailto;
   }
